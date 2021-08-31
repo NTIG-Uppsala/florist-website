@@ -37,6 +37,7 @@
 ### Other
 - Google Chrome v92.0.4515.195
 - [Selenium IDE](https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd) chrome extension v3.17.0
+- [The Nu Html Checker](https://validator.github.io/validator/) v20.6.30
 
 ## Programing Language
 - English function names and variable names
