@@ -1,0 +1,42 @@
+{
+  "id": "aff1a5c2-2e39-43ac-83c5-f4722faa80c9",
+  "version": "2.0",
+  "name": "FloristWebpage",
+  "url": "http://www.itgwebb.se",
+  "tests": [{
+    "id": "bd952237-f30c-43c1-b787-08376d75124f",
+    "name": "Company Title",
+    "commands": [{
+      "id": "ca58f97d-78a1-462c-ada7-e1a9c6b82c69",
+      "comment": "",
+      "command": "open",
+      "target": "/klass/webb2/christoffer/jag/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4fdf382-6f2c-4a02-9717-49fecd20f314",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=item",
+      "targets": [],
+      "value": "Florist Celeber"
+    }, {
+      "id": "bde26a1c-8801-473d-ab3a-16f972f1000f",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Florist Celeber",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "535989e7-5aee-408e-985e-af653c46ffe2",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["bd952237-f30c-43c1-b787-08376d75124f"]
+  }],
+  "urls": ["http://www.itgwebb.se/"],
+  "plugins": []
+}
