@@ -12,10 +12,10 @@
 - Tests made
 - Tests passed
 - Code refactored
-- Comments describeing functions in JavaScript files
+- Comments describing functions in JavaScript files
 - Other comments if needed
 - Reviewed by teammate
-- Commited to GitHub
+- Committed to GitHub
 
 ## Development Environment
 
@@ -43,7 +43,7 @@
 - English comments
 - Comments before function
 - If comment mid function wright it 4 spaces after semicolon
-- camelCaseing on functions, variable names, id and more
+- camelCasing on functions, variable names, id and more
 - File name camelCasing
 
 ### HTML
@@ -78,7 +78,7 @@
 - Use all browsers animation standards
 - padding: 0px; on body tag
 - margin: 0px; on body tag
-- No positon: absolute;
+- No position: absolute;
 
 ### JavaScript
 #### Standard
@@ -93,5 +93,6 @@
 - Avoid long lines
 - Avoid global variables
 
+## Other Specifications
 
-
+- [Tabler Icons](https://tablericons.com/) MIT License
