@@ -1,7 +1,7 @@
 # florist-website
 
 
-## Defenition of Done
+## Definition of Done
 
 ### General
 - Website published to the webb
