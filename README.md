@@ -34,6 +34,10 @@
 - NTIG-Uppsala Organization
 - Explanatory commit message
 
+### Other
+- Google Chrome v92.0.4515.195
+- [Selenium IDE](https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd) chrome extension v3.17.0
+
 ## Programing Language
 - English function names and variable names
 - English comments
@@ -41,9 +45,6 @@
 - If comment mid function wright it 4 spaces after semicolon
 - camelCaseing on functions, variable names, id and more
 - File name camelCasing
-
-## External Programs
-- [Selenium IDE](https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd) chrome extension v3.17.0
 
 ### HTML
 #### Standard
