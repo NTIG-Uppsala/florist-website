@@ -96,3 +96,4 @@
 ## Other Specifications
 
 - [Tabler Icons](https://tablericons.com/) MIT License
+- [Bootstrap](https://github.com/startbootstrap/startbootstrap-agency) MIT License
