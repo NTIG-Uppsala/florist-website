@@ -22,7 +22,7 @@
 ### IDE
 - Visual Studio Code v1.59.1
 
-### Extentions
+### Extensions
 - HTML CSS Support v1.10.2
 - HTML Snippets v1.10.2
 - JavaScript (ES6) code snippets v1.8.0
@@ -38,9 +38,12 @@
 - English function names and variable names
 - English comments
 - Comments before function
-- If comment mid function wrigt it 4 spaces after semicolon
+- If comment mid function wright it 4 spaces after semicolon
 - camelCaseing on functions, variable names, id and more
 - File name camelCasing
+
+## External Programs
+- [Selenium IDE](https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd) chrome extension v3.17.0
 
 ### HTML
 #### Standard
