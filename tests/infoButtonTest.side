@@ -1,0 +1,55 @@
+{
+  "id": "aff1a5c2-2e39-43ac-83c5-f4722faa80c9",
+  "version": "2.0",
+  "name": "infoButtonTest",
+  "url": "http://www.itgwebb.se/klass/webb2/christoffer/florist-celeber",
+  "tests": [{
+    "id": "bd952237-f30c-43c1-b787-08376d75124f",
+    "name": "Company Title",
+    "commands": [{
+      "id": "17a0626b-41d7-4e57-b09b-cdf837be51e0",
+      "comment": "",
+      "command": "open",
+      "target": "http://www.itgwebb.se/klass/webb2/christoffer/florist-celeber/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22ea05a7-ca4d-46de-a1a0-b3056a362338",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "702x442",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09446e4b-c088-4564-aeed-33fc4720cf0d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//a[contains(@href, '#info')])[2]",
+      "targets": [
+        ["css=.btn-primary:nth-child(3)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Info')])[2]", "xpath:link"],
+        ["xpath=//body[@id='page-top']/header/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#info')])[2]", "xpath:href"],
+        ["xpath=//header/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdb5e6d7-85c4-4638-a905-1e5589f73bea",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.btn-primary:nth-child(3)",
+      "targets": [],
+      "value": "INFO"
+    }]
+  }],
+  "suites": [{
+    "id": "535989e7-5aee-408e-985e-af653c46ffe2",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["bd952237-f30c-43c1-b787-08376d75124f"]
+  }],
+  "urls": ["http://www.itgwebb.se/", "http://www.itgwebb.se/klass/webb2/christoffer/florist-celeber"],
+  "plugins": []
+}
