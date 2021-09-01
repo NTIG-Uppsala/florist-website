@@ -98,3 +98,23 @@
 
 - [Tabler Icons](https://tablericons.com/) MIT License
 - [Bootstrap](https://github.com/startbootstrap/startbootstrap-agency) MIT License
+
+# Documentation
+
+## florist-celeber
+
+#### index.html
+- Main file that structures the website.
+
+### Assets
+#### img
+- Containes images for the website.
+
+### CSS
+#### style.css
+- All styles for the elemtents.
+
+### JavaScript
+#### script.js
+- Menu becomes readable on smaller resolutions by making it a dropdown menu.
+- The header becomes smaller when scrolling downwards and it stays on top.
