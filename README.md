@@ -124,3 +124,4 @@
 #### websiteInfoTextTest.side
 #### socialMediaLinksTest.side
 #### copyrightTestText.side
+#### dropdownMenuMobileTest.side
