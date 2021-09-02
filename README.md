@@ -9,13 +9,28 @@
 - No uncompleted files commited day before deadline
 
 ### Code
-- Tests made
-- Tests passed
 - Code refactored
 - Comments describing functions in JavaScript files
 - Other comments if needed
 - Reviewed by teammate
 - Committed to GitHub
+
+### Tests
+- Tests made
+- Tests passed
+
+#### Resolution Tests
+- Test with 5 diffrent resolutions
+- Use Toggle Device Toolbal (Ctrl + Shift + M)
+- Screenshots are not needed just have to be looked at
+
+##### Diffrent test modes
+
+- Nexus 5X (412x732)
+- Galaxy S5 (360x640)
+- iPhone S5 (320x568)
+- iPhone X (375x812)
+- iPad (768x1024)
 
 ## Development Environment
 
