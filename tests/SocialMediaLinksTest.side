@@ -17,40 +17,86 @@
       "id": "04614c84-27b1-408d-ac60-dae7b8669b43",
       "comment": "",
       "command": "setWindowSize",
-      "target": "702x442",
+      "target": "1000x1000",
       "targets": [],
       "value": ""
     }, {
       "id": "0971701b-163b-4177-b2f5-32f7ae017274",
       "comment": "",
-      "command": "click",
-      "target": "css=#facebookIcon > svg",
+      "command": "clickAt",
+      "target": "css=.btn:nth-child(1) > .icon-container",
       "targets": [
-        ["css=#facebookIcon > svg", "css:finder"]
+        ["css=.btn:nth-child(1) > .icon-container", "css:finder"],
+        ["xpath=//body[@id='page-top']/footer/div/div/div[2]/a/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "463c2ad5-b718-4ed4-a589-9da717cb23ed",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.\\_64-f > span",
+      "targets": [
+        ["css=.\\_64-f > span", "css:finder"],
+        ["xpath=//div[@id='u_0_0_lL']/span/a/span", "xpath:idRelative"],
+        ["xpath=//span/a/span", "xpath:position"]
+      ],
+      "value": "NTI Gymnasiet Uppsala"
+    }, {
+      "id": "ad104bd3-945f-4f6f-934c-1912f508d2ce",
+      "comment": "",
+      "command": "open",
+      "target": "http://www.itgwebb.se/klass/webb2/christoffer/florist-celeber/",
+      "targets": [],
       "value": ""
     }, {
       "id": "f7551bd0-ae66-4d1a-9ce8-8fd75df3b610",
       "comment": "",
-      "command": "click",
-      "target": "css=.btn:nth-child(2) .icon",
+      "command": "clickAt",
+      "target": "css=.btn:nth-child(2) > .icon-container",
       "targets": [
-        ["css=.btn:nth-child(2) .icon", "css:finder"],
-        ["xpath=//body[@id='page-top']/footer/div/div/div[2]/a[2]/div/div", "xpath:idRelative"],
-        ["xpath=//a[2]/div/div", "xpath:position"]
+        ["css=.btn:nth-child(2) > .icon-container", "css:finder"],
+        ["xpath=//body[@id='page-top']/footer/div/div/div[2]/a[2]/div", "xpath:idRelative"],
+        ["xpath=//a[2]/div", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "226cc8ec-b533-439e-affb-d395a5733bae",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.css-4rbku5 > .css-1dbjc4n > .css-1dbjc4n > .css-1dbjc4n > .css-901oao > .css-901oao > .css-901oao",
+      "targets": [
+        ["css=.css-4rbku5 > .css-1dbjc4n > .css-1dbjc4n > .css-1dbjc4n > .css-901oao > .css-901oao > .css-901oao", "css:finder"],
+        ["xpath=//div[@id='react-root']/div/div/div[2]/main/div/div/div/div/div/div/div/div/div/div/div/div[2]/div/h2/div/div/div/span/span/span", "xpath:idRelative"],
+        ["xpath=//span/span/span", "xpath:position"]
+      ],
+      "value": "NTI Gymnasiet Uppsala"
+    }, {
+      "id": "1062b6b0-0dcb-43d1-952f-62d703f362db",
+      "comment": "",
+      "command": "open",
+      "target": "http://www.itgwebb.se/klass/webb2/christoffer/florist-celeber/",
+      "targets": [],
       "value": ""
     }, {
       "id": "24312e9d-2d6b-419e-81f4-e16e18d644ab",
       "comment": "",
-      "command": "click",
-      "target": "css=.btn:nth-child(3) .icon",
-      "targets": [
-        ["css=.btn:nth-child(3) .icon", "css:finder"],
-        ["xpath=//body[@id='page-top']/footer/div/div/div[2]/a[3]/div/div", "xpath:idRelative"],
-        ["xpath=//a[3]/div/div", "xpath:position"]
-      ],
+      "command": "clickAt",
+      "target": "css=.btn:nth-child(3) > .icon-container",
+      "targets": [],
       "value": ""
+    }, {
+      "id": "f8b54ba8-564d-41d5-8298-e9cc8f6e1b5e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.fKFbl",
+      "targets": [
+        ["css=.fKFbl", "css:finder"],
+        ["xpath=//div[@id='react-root']/section/main/div/header/section/div/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'ntiuppsala')]", "xpath:innerText"]
+      ],
+      "value": "ntiuppsala"
     }]
   }],
   "suites": [{
