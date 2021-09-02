@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
-    
+    //Mobile navbar open/close on menu click
     const navbarMenu = document.getElementById('navbarMenu');
     const navbarCollapse = document.getElementById('navbarResponsive');
     const ariaExpanded = navbarMenu.getAttribute("aria-expanded");
