@@ -41,10 +41,10 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
-    //Mobile navbar open/close on menu click
+    
     const navbarMenu = document.getElementById('navbarMenu');
     const navbarCollapse = document.getElementById('navbarResponsive');
-    let ariaExpanded = navbarMenu.getAttribute("aria-expanded");
+    const ariaExpanded = navbarMenu.getAttribute("aria-expanded");
     navbarMenu.onclick = function(){
         if (navbarCollapse.classList.contains('show')) {
             navbarToggler.classList.remove('focus')
@@ -53,6 +53,7 @@ window.addEventListener('DOMContentLoaded', event => {
             return
         }
         navbarToggler.classList.add('focus')
+        console.log('hej'); 
         navbarCollapse.classList.add('show')
         ariaExpanded = 'true';
     }
