@@ -29,15 +29,6 @@ window.addEventListener('DOMContentLoaded', event => {
     // Shrink the navbar when page is scrolled
     document.addEventListener('scroll', navbarShrink);
 
-    // Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            offset: 74,
-        });
-    };
-
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
@@ -50,5 +41,21 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
+    
+    const navbarMenu = document.getElementById('navbarMenu');
+    const navbarCollapse = document.getElementById('navbarResponsive');
+    const ariaExpanded = navbarMenu.getAttribute("aria-expanded");
+    navbarMenu.onclick = function(){
+        if (navbarCollapse.classList.contains('show')) {
+            navbarToggler.classList.remove('focus')
+            navbarCollapse.classList.remove('show')
+            ariaExpanded = 'false';
+            return
+        }
+        navbarToggler.classList.add('focus')
+        console.log('hej'); 
+        navbarCollapse.classList.add('show')
+        ariaExpanded = 'true';
+    }
 
 });
