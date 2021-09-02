@@ -118,3 +118,10 @@
 #### script.js
 - Menu becomes readable on smaller resolutions by making it a dropdown menu.
 - The header becomes smaller when scrolling downwards and it stays on top.
+
+### Tests
+#### infoButtonTest.side
+#### websiteInfoTextTest.side
+#### socialMediaLinksTest.side
+#### copyrightTestText.side
+#### dropdownMenuMobileTest.side
