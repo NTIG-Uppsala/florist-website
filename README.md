@@ -123,3 +123,4 @@
 #### infoButtonTest.side
 #### websiteInfoTextTest.side
 #### socialMediaLinksTest.side
+#### copyrightTestText.side
