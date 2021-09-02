@@ -5,7 +5,7 @@
 
 ### General
 - Website published to the webb
-- Description of all files in README.md
+- All files listed in README.md
 - No uncompleted files commited day before deadline
 
 ### Code
@@ -25,7 +25,6 @@
 - Screenshots are not needed just have to be looked at
 
 ##### Diffrent test modes
-
 - Nexus 5X (412x732)
 - Galaxy S5 (360x640)
 - iPhone S5 (320x568)
@@ -120,6 +119,18 @@
 
 #### index.html
 - Main file that structures the website.
+
+### Favicon
+- favicon.ico
+- android-chrome-192x192.png
+- android-chrome-512x512.png
+- apple-touch-icon.png
+- browserconfig.xml
+- favicon-16x16.png
+- favicon-32x32.png
+- mstile-150x150.png
+- safari-pinned-tab.svg
+- site.webmanifest
 
 ### Assets
 #### img
