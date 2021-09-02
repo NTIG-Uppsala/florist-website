@@ -44,17 +44,14 @@ window.addEventListener('DOMContentLoaded', event => {
     
     const navbarMenu = document.getElementById('navbarMenu');
     const navbarCollapse = document.getElementById('navbarResponsive');
-    let ariaExpanded = navbarMenu.getAttribute("aria-expanded");
     navbarMenu.onclick = function(){
         if (navbarCollapse.classList.contains('show')) {
             navbarToggler.classList.remove('focus')
             navbarCollapse.classList.remove('show')
-            ariaExpanded = 'false';
             return
         }
         navbarToggler.classList.add('focus')
         navbarCollapse.classList.add('show')
-        ariaExpanded = 'true';
     }
 
 });
