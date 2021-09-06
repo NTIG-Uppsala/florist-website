@@ -4,9 +4,9 @@
 ## Definition of Done
 
 ### General
-- Website published to the webb
+- Website published to the web
 - All files listed in README.md
-- No uncompleted files commited day before deadline
+- Try not to commit files with known errors, the day before deadline
 
 ### Code
 - Code refactored
@@ -20,11 +20,11 @@
 - Tests passed
 
 #### Resolution Tests
-- Test with 5 diffrent resolutions
+- Test with 5 different resolutions
 - Use Toggle Device Toolbal (Ctrl + Shift + M)
 - Screenshots are not needed just have to be looked at
 
-##### Diffrent test modes
+##### Different test modes
 - Nexus 5X (412x732)
 - Galaxy S5 (360x640)
 - iPhone S5 (320x568)
@@ -51,9 +51,9 @@
 ### Other
 - Google Chrome v92.0.4515.195
 - [Selenium IDE](https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd) chrome extension v3.17.0
-- [The Nu Html Checker](https://validator.github.io/validator/) v20.6.30
+- [The Nu HTML Checker](https://validator.github.io/validator/) v20.6.30
 
-## Programing Language
+## Programming Language
 - English function names and variable names
 - English comments
 - Comments before function
@@ -69,7 +69,7 @@
 - External JavaScript
 - Defer in script tag
 - Language tag "sv"
-- Charset UTF-8
+- HTML Charset UTF-8
 ```
 <!DOCTYPE html>
 <html lang="sv">
@@ -90,7 +90,7 @@
 
 ### CSS
 #### Standard
-- Use all browsers animation standards
+- Use all browser's animation standards
 - padding: 0px; on body tag
 - margin: 0px; on body tag
 - No position: absolute;
@@ -103,7 +103,7 @@
 - Use one space before the opening bracket
 - Place the curly closing bracket on a new line
 - Arrays, every item new line
-- Space around operants and after commas
+- Space around operands and after commas
 - Always use 4 spaces for indentation of code blocks
 - Avoid long lines
 - Avoid global variables
@@ -134,20 +134,20 @@
 
 ### Assets
 #### img
-- Containes images for the website.
+- Contains images for the website.
 
 ### CSS
 #### style.css
-- All styles for the elemtents.
+- All styles for the elements.
 
 ### JavaScript
 #### script.js
-- Menu becomes readable on smaller resolutions by making it a dropdown menu.
+- Menu becomes readable on smaller resolutions by making it a drop-down menu.
 - The header becomes smaller when scrolling downwards and it stays on top.
 
 ### Tests
 #### infoButtonTest.side
 #### websiteInfoTextTest.side
 #### socialMediaLinksTest.side
-#### copyrightTestText.side
+#### copyrightTextTest.side
 #### dropdownMenuMobileTest.side
