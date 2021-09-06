@@ -21,6 +21,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "a631ef56-4305-47f5-89f7-46e4ffdfccb3",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Florist Celeber",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "4d8933bd-f014-469e-b98a-588304c8e027",
       "comment": "",
       "command": "verifyText",
@@ -63,18 +70,6 @@
       ],
       "value": "INFO"
     }, {
-      "id": "eb8c2c50-29df-4576-9f2e-e9146d92f236",
-      "comment": "",
-      "command": "verifyText",
-      "target": "css=#info .section-subheading",
-      "targets": [
-        ["css=#info .section-subheading", "css:finder"],
-        ["xpath=//section[@id='info']/div/div/h3", "xpath:idRelative"],
-        ["xpath=//h3", "xpath:position"],
-        ["xpath=//h3[contains(.,'Info angående Florist Celeber')]", "xpath:innerText"]
-      ],
-      "value": "Info angående Florist Celeber "
-    }, {
       "id": "23ef9512-c32e-4d7f-b26e-8d88e8c51986",
       "comment": "",
       "command": "verifyText",
@@ -90,74 +85,46 @@
       "id": "cbc6110c-3476-41a5-997c-a00b0fe6cb28",
       "comment": "",
       "command": "verifyText",
-      "target": "css=.col-md-4:nth-child(1) li:nth-child(1)",
+      "target": "css=.d-flex:nth-child(1) > div:nth-child(1)",
       "targets": [
-        ["css=.col-md-4:nth-child(1) li:nth-child(1)", "css:finder"],
-        ["xpath=//section[@id='info']/div/div[2]/div/div/ul/li", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/ul/li", "xpath:position"],
-        ["xpath=//li[contains(.,'Måndagar 10-16')]", "xpath:innerText"]
+        ["css=.d-flex:nth-child(1) > div:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='hoursOpen']/div[2]/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/div/div", "xpath:position"]
       ],
-      "value": "Måndagar 10-16"
+      "value": "Måndag - Fredag"
     }, {
       "id": "ff331d72-04c2-480d-bef7-9b895848ce00",
       "comment": "",
       "command": "verifyText",
-      "target": "css=.col-md-4:nth-child(1) li:nth-child(2)",
+      "target": "css=.d-flex:nth-child(1) > .ms-auto",
       "targets": [
-        ["css=.col-md-4:nth-child(1) li:nth-child(2)", "css:finder"],
-        ["xpath=//section[@id='info']/div/div[2]/div/div/ul/li[2]", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/ul/li[2]", "xpath:position"],
-        ["xpath=//li[contains(.,'Tisdagar 10-16')]", "xpath:innerText"]
+        ["css=.d-flex:nth-child(1) > .ms-auto", "css:finder"],
+        ["xpath=//div[@id='hoursOpen']/div[2]/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[2]", "xpath:position"]
       ],
-      "value": "Tisdagar 10-16"
+      "value": "10-16"
     }, {
       "id": "c421b915-d898-4231-9e27-16a98773bca2",
       "comment": "",
       "command": "verifyText",
-      "target": "css=.col-md-4:nth-child(1) li:nth-child(3)",
+      "target": "css=.d-flex:nth-child(2) > div:nth-child(1)",
       "targets": [
-        ["css=.col-md-4:nth-child(1) li:nth-child(3)", "css:finder"],
-        ["xpath=//section[@id='info']/div/div[2]/div/div/ul/li[3]", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/ul/li[3]", "xpath:position"],
-        ["xpath=//li[contains(.,'Onsdagar 10-16')]", "xpath:innerText"]
+        ["css=.d-flex:nth-child(2) > div:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='hoursOpen']/div[2]/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div", "xpath:position"]
       ],
-      "value": "Onsdagar 10-16"
+      "value": "Lördag"
     }, {
       "id": "84565bae-ea8b-438f-9b89-ed9fbc2c0dd2",
       "comment": "",
       "command": "verifyText",
-      "target": "css=.infoList > li:nth-child(4)",
+      "target": "css=.d-flex:nth-child(2) > .ms-auto",
       "targets": [
-        ["css=.infoList > li:nth-child(4)", "css:finder"],
-        ["xpath=//section[@id='info']/div/div[2]/div/div/ul/li[4]", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/ul/li[4]", "xpath:position"],
-        ["xpath=//li[contains(.,'Torsdagar 10-16')]", "xpath:innerText"]
+        ["css=.d-flex:nth-child(2) > .ms-auto", "css:finder"],
+        ["xpath=//div[@id='hoursOpen']/div[2]/div/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
       ],
-      "value": "Torsdagar 10-16"
-    }, {
-      "id": "28ab7305-9e31-47b7-a785-d42cb21f7f45",
-      "comment": "",
-      "command": "verifyText",
-      "target": "css=.infoList > li:nth-child(5)",
-      "targets": [
-        ["css=.infoList > li:nth-child(5)", "css:finder"],
-        ["xpath=//section[@id='info']/div/div[2]/div/div/ul/li[5]", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/ul/li[5]", "xpath:position"],
-        ["xpath=//li[contains(.,'Fredagar 10-16')]", "xpath:innerText"]
-      ],
-      "value": "Fredagar 10-16"
-    }, {
-      "id": "c8994641-066e-453b-b347-905797d2370b",
-      "comment": "",
-      "command": "verifyText",
-      "target": "css=li:nth-child(6)",
-      "targets": [
-        ["css=li:nth-child(6)", "css:finder"],
-        ["xpath=//section[@id='info']/div/div[2]/div/div/ul/li[6]", "xpath:idRelative"],
-        ["xpath=//li[6]", "xpath:position"],
-        ["xpath=//li[contains(.,'Lördagar 12-15')]", "xpath:innerText"]
-      ],
-      "value": "Lördagar 12-15"
+      "value": "12-15"
     }, {
       "id": "f11ed4c0-9bb2-40a8-86e8-ea11968eaaac",
       "comment": "",
@@ -181,7 +148,7 @@
         ["xpath=//div[2]/div/ul/li", "xpath:position"],
         ["xpath=//li[contains(.,'Fjällgatan 32H 981 39')]", "xpath:innerText"]
       ],
-      "value": "Fjällgatan 32H 981 39"
+      "value": "Fjällgatan 32H"
     }, {
       "id": "cd654be3-c7ee-4da8-92be-b9478712657a",
       "comment": "",
@@ -193,7 +160,7 @@
         ["xpath=//div[2]/div/ul/li[2]", "xpath:position"],
         ["xpath=//li[contains(.,'KIRUNA')]", "xpath:innerText"]
       ],
-      "value": "KIRUNA"
+      "value": "981 39 Kiruna"
     }, {
       "id": "8b678904-0a52-4dca-9b92-7575b3b7104c",
       "comment": "",
@@ -232,7 +199,7 @@
         ["xpath=//div[3]/div/ul/li", "xpath:position"],
         ["xpath=//li[contains(.,'Tel: 0630-555-555')]", "xpath:innerText"]
       ],
-      "value": "Tel: 0630-555-555"
+      "value": "0630-555-555"
     }, {
       "id": "1fb9a19a-32da-45f0-8466-0df8dda5f799",
       "comment": "",
@@ -244,7 +211,59 @@
         ["xpath=//div[3]/div/ul/li[2]", "xpath:position"],
         ["xpath=//li[contains(.,'Mail: info@itgwebb.se')]", "xpath:innerText"]
       ],
-      "value": "Mail: info@itgwebb.se"
+      "value": "info@itgwebb.se"
+    }, {
+      "id": "151c7812-ab7c-442d-a154-6c6e14bf6932",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.nav-item:nth-child(1) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Info')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#info')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": "INFO"
+    }, {
+      "id": "d3548efe-d3ac-4114-a41e-1f02eeb8e075",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Öppettider')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#hoursOpen')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": "ÖPPETTIDER"
+    }, {
+      "id": "2bc66565-8e39-4b9b-ad21-425963d5e862",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.nav-item:nth-child(3) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Hitta Oss')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#findUs')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": "HITTA OSS"
+    }, {
+      "id": "c57b4d59-aea7-4bb2-8a83-f18da3859b35",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.nav-item:nth-child(4) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(4) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Kontaktuppgifter')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#aboutUs')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"]
+      ],
+      "value": "KONTAKTUPPGIFTER"
     }]
   }],
   "suites": [{
