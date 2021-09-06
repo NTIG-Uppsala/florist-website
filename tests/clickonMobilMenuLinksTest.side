@@ -1,0 +1,148 @@
+{
+  "id": "cd43fac8-c666-44cf-a1b7-557b94ccc188",
+  "version": "2.0",
+  "name": "Florist Celeber",
+  "url": "http://www.itgwebb.se",
+  "tests": [{
+    "id": "46392fe3-2e4a-4da6-bf3c-2e3a9486b75d",
+    "name": "ClickonMenuLinksTest",
+    "commands": [{
+      "id": "f69c0370-da55-4344-b3ba-c0805059738d",
+      "comment": "",
+      "command": "open",
+      "target": "/klass/webb2/christoffer/florist-celeber/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8efef46-87b0-43ed-adf8-c6af1086ce90",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1054x642",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0fb089e-c31a-4d75-92de-5871d6c0d4bc",
+      "comment": "",
+      "command": "click",
+      "target": "id=navbarMenu",
+      "targets": [
+        ["id=navbarMenu", "id"],
+        ["css=#navbarMenu", "css:finder"],
+        ["xpath=//button[@id='navbarMenu']", "xpath:attributes"],
+        ["xpath=//nav[@id='mainNav']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d7084af-35ba-41fc-9583-ebf83b83ef05",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(1) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Info')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#info')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7466d4d7-3408-42c2-8e50-617d417d151e",
+      "comment": "",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "803aa96c-6896-4d5c-b417-ab706f5f1de1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-tabler-menu-2",
+      "targets": [
+        ["css=.icon-tabler-menu-2", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7386428d-cd67-4003-9b29-abdf65fa05da",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Öppettider')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#hoursOpen')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "df8ac41b-c6c3-46af-aba3-26c7d575c4a7",
+      "comment": "",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85456ab8-2934-4150-ad73-31d40d2b603c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-tabler-menu-2",
+      "targets": [
+        ["css=.icon-tabler-menu-2", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "6701c4ac-6c1c-4bea-b114-e20cff711c3d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(3) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Hitta Oss')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#findUs')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f97adc5-0246-4e79-a999-43d610d0452f",
+      "comment": "",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "595a3026-dd48-4cc4-9688-a2fdf34b6804",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-tabler-menu-2",
+      "targets": [
+        ["css=.icon-tabler-menu-2", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "03fd7a59-1953-4599-9c37-2dc21cca85b8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(4) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(4) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Kontaktuppgifter')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#aboutUs')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "287a186c-3f30-4227-b233-601aa7bf6c87",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["46392fe3-2e4a-4da6-bf3c-2e3a9486b75d"]
+  }],
+  "urls": ["http://www.itgwebb.se/"],
+  "plugins": []
+}
