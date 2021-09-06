@@ -137,8 +137,10 @@
 - Contains images for the website.
 
 ### CSS
+#### styles.css
+- All styles for the elements (Bootstrap).
 #### style.css
-- All styles for the elements.
+- Our own css code.
 
 ### JavaScript
 #### script.js
@@ -151,3 +153,6 @@
 #### socialMediaLinksTest.side
 #### copyrightTextTest.side
 #### dropdownMenuMobileTest.side
+#### clickonLinksTest.side
+#### clickonMenuLinksTest.side
+#### clickonMobilMenuLinksTest.side
