@@ -12,8 +12,7 @@ Copyright (c) 2013-2021 Start Bootstrap LLC -->
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-
-        <!--Our css-->
+	<!--Our css-->
         <link href="css/style.css" rel="stylesheet">
         <!-- Favicon-->
         <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
@@ -21,9 +20,9 @@ Copyright (c) 2013-2021 Start Bootstrap LLC -->
         <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
         <link rel="manifest" href="assets/site.webmanifest">
         <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
-        <script src="js/scripts.js" defer></script>
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
+        <script src="js/scripts.js" defer></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -42,6 +41,9 @@ Copyright (c) 2013-2021 Start Bootstrap LLC -->
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#info">Info</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#hoursOpen">Öppettider</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#findUs">Hitta Oss</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#aboutUs">Kontaktuppgifter</a></li>
                     </ul>
                 </div>
             </div>
@@ -61,7 +63,7 @@ Copyright (c) 2013-2021 Start Bootstrap LLC -->
                     <h2 class="section-heading text-uppercase">INFO</h2>
                 </div>
                 <div class="row text-center">
-                    <div class="col-md-4">
+                    <div class="col-md-4"  id="hoursOpen">
                         <div class="icon-circle">
                             <div class="icon-container">
                                 <div class="icon">
@@ -75,17 +77,21 @@ Copyright (c) 2013-2021 Start Bootstrap LLC -->
                         </div>
                         <h4 class="my-3">Öppettider</h4>
                         <div class="infoListContainer">
-                            <ul class="infoList text-muted">
-                                <li>Måndagar 10-16</li>
-                                <li>Tisdagar 10-16</li>
-                                <li>Onsdagar 10-16</li>
-                                <li>Torsdagar 10-16</li>
-                                <li>Fredagar 10-16</li>
-                                <li>Lördagar 12-15</li>
-                            </ul>
+                            <div class="hours text-muted">
+                                <div class="hoursContainer">
+                                    <div class="d-flex">
+                                        <div>Måndag - Fredag</div>
+                                        <div class="ms-auto">10-16</div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div>Lördag</div>
+                                        <div class="ms-auto">12-15</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" id="findUs">
                         <div class="icon-circle">
                             <div class="icon-container">
                                 <div class="icon">
@@ -103,16 +109,15 @@ Copyright (c) 2013-2021 Start Bootstrap LLC -->
                         <h4 class="my-3">Hitta oss</h4>
                         <div class="infoListContainer">
                             <ul class="infoList text-muted">
-                                <li>Fjällgatan 32H 981 39</li>
-                                <li>KIRUNA</li>
-                                <li> <a href="https://www.google.com/maps/dir//Fj%C3%A4llgatan+32,+981+39+Kiruna/@67.8657451,20.2327419,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x45d0ba6368d7c9a3:0xe3887ef038c559b0!2m2!1d20.2340185!2d67.8660547">Hitta hit</a></li> <!--Link to place google maps-->
-
+                                <li>Fjällgatan 32H</li>
+                                <li>981 39 Kiruna</li>
+                                <li><a href="https://www.google.com/maps/dir//Fj%C3%A4llgatan+32,+981+39+Kiruna/@67.8657451,20.2327419,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x45d0ba6368d7c9a3:0xe3887ef038c559b0!2m2!1d20.2340185!2d67.8660547">Hitta hit</a></li> <!--Link to place google maps-->
                             </ul>
                         </div>
                        
                     </div>
                     <div class="col-md-4">
-                        <div class="icon-circle">
+                        <div class="icon-circle" >
                             <div class="icon-container">
                                 <div class="icon">
                                     <svg class="icon icon-tabler icon-tabler-phone" width="100" height="100" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -122,11 +127,11 @@ Copyright (c) 2013-2021 Start Bootstrap LLC -->
                                 </div>
                             </div>
                         </div>
-                        <h4 class="my-3">Kontaktuppgifter</h4>
+                        <h4 class="my-3" id="aboutUs">Kontaktuppgifter</h4>
                         <div class="infoListContainer">
                             <ul class="infoList text-muted">
-                                <li><b>Tel:</b> 0630-555-555</li>
-                                <li><b>Mail:</b> info@itgwebb.se</li>
+                                <li><a href="tel:0630-555-555">0630-555-555</a></li>
+                                <li><a href="mailto: info@itgwebb.se">info@itgwebb.se</a></li>
                             </ul>
                         </div>
                     </div>
@@ -183,5 +188,16 @@ Copyright (c) 2013-2021 Start Bootstrap LLC -->
                 </div>
             </div>
         </footer>
+        <div class="mouse_scroll">
+
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div>
+                <span class="m_scroll_arrows unu"></span>
+                <span class="m_scroll_arrows doi"></span>
+                <span class="m_scroll_arrows trei"></span>
+            </div>
+        </div>
     </body>
 </html>
