@@ -4,31 +4,6 @@
   "name": "Florist Celeber",
   "url": "http://www.itgwebb.se",
   "tests": [{
-    "id": "3c3194f3-454a-462c-a9a2-80944e776b65",
-    "name": "ClickonTelLinkTest",
-    "commands": [{
-      "id": "16cc2e1b-3068-46b7-98f8-5d8733213f91",
-      "comment": "",
-      "command": "open",
-      "target": "/klass/webb2/christoffer/florist-celeber/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "faccf384-7b03-42b9-bf85-430c036af8ee",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1054x642",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "73050cbb-0722-4efd-83b1-d494ea013ecb",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=0630-555-555",
-      "targets": [],
-      "value": ""
-    }]
-  }, {
     "id": "055590df-8d7e-449e-b83b-2331a3e4e25d",
     "name": "ClickonEmailLinkTest",
     "commands": [{
@@ -59,6 +34,57 @@
         ["xpath=//div[3]/div[2]/ul/li/a", "xpath:position"],
         ["xpath=//a[contains(.,'0630-555-555')]", "xpath:innerText"]
       ],
+      "value": ""
+    }]
+  }, {
+    "id": "4f18ae07-c82d-453a-87c8-917003254cf2",
+    "name": "ClickonFindusLink",
+    "commands": [{
+      "id": "c779eb3d-d5c0-4650-ab89-9825db4e1db6",
+      "comment": "",
+      "command": "open",
+      "target": "/klass/webb2/christoffer/florist-celeber/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd2483ad-ebec-4ffe-8b86-9aef575c13fb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Hitta hit",
+      "targets": [
+        ["linkText=Hitta hit", "linkText"],
+        ["css=.infoList > li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Hitta hit')]", "xpath:link"],
+        ["xpath=//div[@id='findUs']/div[2]/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.google.com/maps/dir//Fj%C3%A4llgatan+32,+981+39+Kiruna/@67.8657451,20.2327419,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x45d0ba6368d7c9a3:0xe3887ef038c559b0!2m2!1d20.2340185!2d67.8660547')]", "xpath:href"],
+        ["xpath=//div[2]/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Hitta hit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe14c0d3-66fd-48ca-8e15-f88a0d56650a",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Google Maps",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "bd613ad1-ea0d-47ae-90de-a7ceaabfa6b4",
+    "name": "ClickonTelLinkTest",
+    "commands": [{
+      "id": "60f768ef-c1de-49ed-8020-434ed4c30aa2",
+      "comment": "",
+      "command": "open",
+      "target": "/klass/webb2/christoffer/florist-celeber/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "432c0ca2-3032-44d5-b9c3-3de64279db0a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=0630-555-555",
+      "targets": [],
       "value": ""
     }]
   }],
