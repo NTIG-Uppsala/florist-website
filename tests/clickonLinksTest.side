@@ -25,15 +25,7 @@
       "comment": "",
       "command": "click",
       "target": "linkText=info@itgwebb.se",
-      "targets": [
-        ["linkText=0630-555-555", "linkText"],
-        ["css=.infoList > li:nth-child(1) > a", "css:finder"],
-        ["xpath=//a[contains(text(),'0630-555-555')]", "xpath:link"],
-        ["xpath=//section[@id='info']/div/div[2]/div[3]/div[2]/ul/li/a", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, 'tel:0630-555-555')]", "xpath:href"],
-        ["xpath=//div[3]/div[2]/ul/li/a", "xpath:position"],
-        ["xpath=//a[contains(.,'0630-555-555')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }]
   }, {
