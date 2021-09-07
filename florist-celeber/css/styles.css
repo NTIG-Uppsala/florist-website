@@ -11441,7 +11441,8 @@ header.masthead .masthead-heading {
   }
 }
 
-@media (orientation: landscape) {
+@media screen and (orientation: landscape),
+       screen and (max-height: 650px) {
     #mastheadContainer{
       padding-top: 10px;
     }
