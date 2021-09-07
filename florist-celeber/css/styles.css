@@ -11440,6 +11440,12 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
+
+@media (orientation: landscape) {
+    #mastheadContainer{
+      padding-top: 10px;
+    }
+}
 #produkter .produkter-item {
   max-width: 26rem;
   margin-left: auto;
