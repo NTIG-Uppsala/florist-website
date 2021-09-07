@@ -27,7 +27,7 @@
 ##### Different test modes
 - Nexus 5X (412x732)
 - Galaxy S5 (360x640)
-- iPhone S5 (320x568)
+- iPhone 5/SE (320x568)
 - iPhone X (375x812)
 - iPad (768x1024)
 
