@@ -148,11 +148,23 @@
 - The header becomes smaller when scrolling downwards and it stays on top.
 
 ### Tests
-#### infoButtonTest.side
-#### websiteInfoTextTest.side
-#### socialMediaLinksTest.side
-#### copyrightTextTest.side
-#### dropdownMenuMobileTest.side
-#### clickonLinksTest.side
-#### clickonMenuLinksTest.side
-#### clickonMobilMenuLinksTest.side
+- infoButtonTest.side
+- websiteInfoTextTest.side
+- socialMediaLinksTest.side
+- copyrightTextTest.side
+- dropdownMenuMobileTest.side
+- clickonLinksTest.side
+- clickonMenuLinksTest.side
+- clickonMobilMenuLinksTest.side
+
+### Pre-commit Tests
+#### In .git/hooks/pre-commit
+```
+#!/bin/bash
+
+
+
+PATH TO BROWSER "https://validator.nu/?doc=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fflorist-celeber%2F" #HTML
+PATH TO BROWSER "http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fflorist-celeber%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" #CSS
+PATH TO BROWSER "https://validator.w3.org/checklink?uri=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fflorist-celeber%2F&hide_type=all&depth=&check=Check" #Links on webpage
+```
