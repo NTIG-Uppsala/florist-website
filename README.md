@@ -158,6 +158,7 @@
 #### clickonMobilMenuLinksTest.side
 
 ### Pre-commit Tests
+## In .git/hooks/pre-commit
 ```
 #!/bin/bash
 
