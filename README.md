@@ -148,14 +148,14 @@
 - The header becomes smaller when scrolling downwards and it stays on top.
 
 ### Tests
-#### infoButtonTest.side
-#### websiteInfoTextTest.side
-#### socialMediaLinksTest.side
-#### copyrightTextTest.side
-#### dropdownMenuMobileTest.side
-#### clickonLinksTest.side
-#### clickonMenuLinksTest.side
-#### clickonMobilMenuLinksTest.side
+- infoButtonTest.side
+- websiteInfoTextTest.side
+- socialMediaLinksTest.side
+- copyrightTextTest.side
+- dropdownMenuMobileTest.side
+- clickonLinksTest.side
+- clickonMenuLinksTest.side
+- clickonMobilMenuLinksTest.side
 
 ### Pre-commit Tests
 #### In .git/hooks/pre-commit
