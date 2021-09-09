@@ -1,61 +1,132 @@
 .infoList{
+
     list-style: none;
+
     padding-left: 0px;
+
     display: inline-block;
+
 }
+
+
+
 
 
 .infoList li{
+
     text-align: left;
+
 }
+
+
 
 .infoListContainer{
+
     align-items: center;
+
 }
+
+
 
 .icon-circle{
+
     display: inline-block;
+
     height: 200px;
+
     width: 200px;
+
     background-color: #ffc800;
+
     border-radius: 50%;
+
     margin-bottom: 1rem;
+
 }
+
+
 
 .icon-container{
+
     width: 100%;
+
     height: 100%;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
 }
+
+
 
 .icon{
+
     display: inline-block;
+
     top: 50%;
+
 }
+
+
 
 .weekDayHour{
+
     display: flex;
+
     justify-content: space-between;
+
 }
+
+
 
 .weekEndHour{
+
     display: flex;
+
     justify-content: space-between;
+
 }
+
+
 
 .hoursContainer{
+
     margin: 0 auto;
+
     max-width: 295px;
+
 }
+
+
 
 .arrowDownCon{
+
   display: inline-flex;/* defines flexbox */
+
   flex-direction: column;/* top to bottom */
+
   justify-content: space-between;/* first item at start, last at end */
+
 }
 
+
+
 .arrowDown{
+
   padding-top: 100%;
+
+}
+
+#liveOpeningHours{
+
+padding-top: 10px;
+font-size: 32px;
+max-width: 295px;
+display: flex ;
+top:50% ;
+left: 50%;
+right: 50%;
 }
