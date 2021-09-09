@@ -2,6 +2,8 @@
 
 window.addEventListener('DOMContentLoaded', event => {
 
+    document.getElementById('mainNav').style.visibility = 'visible';
+
     // Navbar shrink function
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');

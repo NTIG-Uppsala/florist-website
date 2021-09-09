@@ -127,3 +127,9 @@ font-size: 32px;
 max-width: 295px;
 margin: 0 auto;
 }
+
+@media screen and (max-width: 1000px){
+    #mainNav{
+        visibility: hidden;
+    }
+}
