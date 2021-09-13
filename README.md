@@ -21,7 +21,7 @@
 
 #### Resolution Tests
 - Test with 5 different resolutions
-- Use Toggle Device Toolbal (Ctrl + Shift + M)
+- Use Toggle Device Toolbar (Ctrl + Shift + M)
 - Screenshots are not needed just have to be looked at
 
 ##### Different test modes
