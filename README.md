@@ -48,10 +48,21 @@
 - NTIG-Uppsala Organization
 - Explanatory commit message
 
+### Development Page
+- [Page](http://www.itgwebb.se/klass/webb2/christoffer/dev/)
+#### How to use devpage
+- Code to devpage
+- Pull code from devpage to local
+- Commit local to GitHub **git commit** (Do not use -m "")
+- Tests will run in pre-commit on devpage
+- If errors in validation, terminate commit in VIM, then **git reset --soft HEAD**
+- If validation passes, write a message in VIM and commit
+- Code will now be live
+
 ### Other
-- Google Chrome v92.0.4515.195
+- Google Chrome v93.0.4577.63
 - [Selenium IDE](https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd) chrome extension v3.17.0
-- [The Nu HTML Checker](https://validator.github.io/validator/) v20.6.30
+- Pre-commit hooks
 
 ## Programming Language
 - English function names and variable names
