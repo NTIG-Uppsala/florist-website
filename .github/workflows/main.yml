@@ -32,9 +32,3 @@ jobs:
         # Folder to upload from, must end with trailing slash /
         server-dir: christoffer/
         # exludes files
-        exclude: 
-         /.git*
-         /.git*/**
-         /node_modules/**
-         chromedriver.exe
-         tests.py
