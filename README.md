@@ -19,18 +19,6 @@
 - Tests made
 - Tests passed
 
-#### Resolution Tests
-- Test with 5 different resolutions
-- Use Toggle Device Toolbar (Ctrl + Shift + M)
-- Screenshots are not needed just have to be looked at
-
-##### Different test modes
-- Nexus 5X (412x732)
-- Galaxy S5 (360x640)
-- iPhone 5/SE (320x568)
-- iPhone X (375x812)
-- iPad (768x1024)
-
 ## Development Environment
 
 ### IDE
@@ -68,7 +56,7 @@
 - English function names and variable names
 - English comments
 - Comments before function
-- If comment mid function wright it 4 spaces after semicolon
+- If comment mid function write it 4 spaces after semicolon
 - camelCasing on functions, variable names, id and more
 - File name camelCasing
 
@@ -159,14 +147,9 @@
 - The header becomes smaller when scrolling downwards and it stays on top.
 
 ### Tests
-- infoButtonTest.side
-- websiteInfoTextTest.side
-- socialMediaLinksTest.side
-- copyrightTextTest.side
-- dropdownMenuMobileTest.side
-- clickonLinksTest.side
-- clickonMenuLinksTest.side
-- clickonMobilMenuLinksTest.side
+#### tests.py
+- Runs all the tests and take screenshots in different resolutions and saves them in a seperate folder.
+
 
 ### Pre-commit Tests for devpage
 #### In .git/hooks/pre-commit
