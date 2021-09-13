@@ -5,14 +5,19 @@ from selenium.webdriver.chrome.options import Options
 import time
 import os
 
-driver = webdriver.Chrome(executable_path="./chromedriver")
+driver = webdriver.Chrome()
 driver.get("http://www.itgwebb.se/klass/webb2/christoffer/florist-celeber/")
 
-def testTitleName(titlename):
-    assert titlename in driver.title
+#----TESTS----
 
 def checkForText(text):
     assert text in driver.find_element_by_xpath("/html/body").text
+
+#Website Title
+def testTitleName(titlename):
+    assert titlename in driver.title
+
+
 
 def checkForAddress():
     checkForText("Fjällgatan 32H")
