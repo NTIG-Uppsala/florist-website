@@ -19,18 +19,6 @@
 - Tests made
 - Tests passed
 
-#### Resolution Tests
-- Test with 5 different resolutions
-- Use Toggle Device Toolbar (Ctrl + Shift + M)
-- Screenshots are not needed just have to be looked at
-
-##### Different test modes
-- Nexus 5X (412x732)
-- Galaxy S5 (360x640)
-- iPhone 5/SE (320x568)
-- iPhone X (375x812)
-- iPad (768x1024)
-
 ## Development Environment
 
 ### IDE
@@ -48,16 +36,27 @@
 - NTIG-Uppsala Organization
 - Explanatory commit message
 
+### Development Page
+- [Page](http://www.itgwebb.se/klass/webb2/christoffer/dev/)
+#### How to use devpage
+- Code to devpage
+- Pull code from devpage to local
+- Commit local to GitHub **git commit** (Do not use -m "")
+- Tests will run in pre-commit on devpage
+- If errors in validation, terminate commit in VIM, then **git reset --soft HEAD**
+- If validation passes, write a message in VIM and commit
+- Code will now be live
+
 ### Other
-- Google Chrome v92.0.4515.195
+- Google Chrome v93.0.4577.63
 - [Selenium IDE](https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd) chrome extension v3.17.0
-- [The Nu HTML Checker](https://validator.github.io/validator/) v20.6.30
+- Pre-commit hooks
 
 ## Programming Language
 - English function names and variable names
 - English comments
 - Comments before function
-- If comment mid function wright it 4 spaces after semicolon
+- If comment mid function write it 4 spaces after semicolon
 - camelCasing on functions, variable names, id and more
 - File name camelCasing
 
@@ -148,24 +147,19 @@
 - The header becomes smaller when scrolling downwards and it stays on top.
 
 ### Tests
-- infoButtonTest.side
-- websiteInfoTextTest.side
-- socialMediaLinksTest.side
-- copyrightTextTest.side
-- dropdownMenuMobileTest.side
-- clickonLinksTest.side
-- clickonMenuLinksTest.side
-- clickonMobilMenuLinksTest.side
+#### tests.py
+- Runs all the tests and take screenshots in different resolutions and saves them in a seperate folder.
 
-### Pre-commit Tests
+
+### Pre-commit Tests for devpage
 #### In .git/hooks/pre-commit
 ```
 #!/bin/bash
 
 
 
-PATH TO BROWSER "https://validator.nu/?doc=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fflorist-celeber%2F" #HTML
-PATH TO BROWSER "http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fflorist-celeber%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" #CSS
-PATH TO BROWSER "https://validator.w3.org/checklink?uri=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fflorist-celeber%2F&hide_type=all&depth=&check=Check" #Links on webpage
-PATH TO BROWSER "https://codebeautify.org/jsvalidate?url=http://www.itgwebb.se/klass/webb2/christoffer/florist-celeber/js/scripts.js" #JS
+PATH TO BROWSER "https://validator.nu/?doc=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fdev" #HTML
+PATH TO BROWSER "http://jigsaw.w3.org/css-validator/validatoruri=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fdev%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" #CSS
+PATH TO BROWSER "https://validator.w3.org/checklink?uri=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fdev&hide_type=all&depth=&check=Check" #Links on webpage
+PATH TO BROWSER "https://codebeautify.org/jsvalidate?url=http://www.itgwebb.se/klass/webb2/christoffer/dev/js/scripts.js" #JS
 ```
