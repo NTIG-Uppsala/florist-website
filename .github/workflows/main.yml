@@ -31,3 +31,4 @@ jobs:
         protocol: ftp
         # Folder to upload from, must end with trailing slash /
         server-dir: christoffer/
+        # exludes files
