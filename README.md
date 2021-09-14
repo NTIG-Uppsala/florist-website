@@ -50,7 +50,7 @@
 
 ### Other
 - Google Chrome v93.0.4577.63
-- [Selenium IDE](https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd) chrome extension v3.17.0
+- [Selenium Webdriver](https://pypi.org/project/selenium/) Python v.3.141.0
 - Pre-commit hooks
 
 ## Programming Language
@@ -146,6 +146,7 @@
 #### script.js
 - Menu becomes readable on smaller resolutions by making it a drop-down menu.
 - The header becomes smaller when scrolling downwards and it stays on top.
+- Live opening hours feature
 
 ### Tests
 #### tests.py
