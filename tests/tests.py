@@ -181,3 +181,4 @@ openingHourslive()
 driver.close()
 
 screenShots(screenResolution)
+print("ALL TESTS PASSED!")
