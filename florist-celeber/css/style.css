@@ -9,7 +9,9 @@
 }
 
 
-
+.noJs{
+    background-color: black !important;
+}
 
 
 .infoList li{

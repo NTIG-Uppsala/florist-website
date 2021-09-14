@@ -4,17 +4,16 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from datetime import datetime
 import time
-import os
 
 driver = webdriver.Chrome()
-driver.get("http://www.itgwebb.se/klass/webb2/christoffer/florist-celeber/")
+driver.get("http://www.itgwebb.se/klass/webb2/christoffer/dev/")
 
 # a path to the site
 website = "http://www.itgwebb.se/klass/webb2/christoffer/dev/"
 # resolution for screenshots
 # d = desktop
 # m = mobile
-screenResolution = [[1920 , 1080 , "d"] , [2560 , 1440 , "d"] , [1080 , 1920 , "m"] , [360 , 640 , "m"]]
+screenResolution = [[1920, 1080, "d"], [2560, 1440, "d"], [1080, 1920, "m"], [360, 640, "m"]]
 
 #----TESTS----
 
@@ -54,7 +53,68 @@ def headerInfo():
 #footer Info
 def footerInfo():
     checkForText("Copyright © Florist Celeber 2021")
-    
+
+
+#OpeningHoursLive
+def openingHourslive():
+
+    dates = [
+        ["new Date('13 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl 10"], #måndag innan strax öppning
+        ["new Date('13 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #måndag innan snart öppning
+        ["new Date('13 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #måndag efter öppning
+        ["new Date('13 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #måndag innan stängning
+        ["new Date('13 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl 10"], #måndag efter stängning
+
+        ["new Date('14 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl 10"], #tisdag innan strax öppning
+        ["new Date('14 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #tisdag innan snart öppning
+        ["new Date('14 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #tisdag efter öppning
+        ["new Date('14 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #tisdag innan stängning
+        ["new Date('14 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl 10"], #tisdag efter stängning
+
+        ["new Date('15 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl 10"], #onsdag innan strax öppning
+        ["new Date('15 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #onsdag innan snart öppning
+        ["new Date('15 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #onsdag efter öppning
+        ["new Date('15 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #onsdag innan stängning
+        ["new Date('15 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl 10"], #onsdag efter stängning
+
+        ["new Date('16 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl 10"], #torsdag innan strax öppning
+        ["new Date('16 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #torsdag innan snart öppning
+        ["new Date('16 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #torsdag efter öppning
+        ["new Date('16 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #torsdag innan stängning
+        ["new Date('16 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl 10"], #torsdag efter stängning
+
+        ["new Date('17 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl 10"], #fredag innan strax öppning
+        ["new Date('17 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #fredag innan snart öppning
+        ["new Date('17 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #fredag efter öppning
+        ["new Date('17 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #fredag innan stängning
+        ["new Date('17 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl 12"], #fredag efter stängning
+
+        ["new Date('18 Sep 2021 11:25:00 GMT+2')", "Öppnar idag kl 12"], #lördag innan strax öppning
+        ["new Date('18 Sep 2021 11:55:00 GMT+2')", "Öppnar snart"], #lördag innan snart öppning
+        ["new Date('18 Sep 2021 12:05:00 GMT+2')", "Öppet just nu"], #lördag efter öppning
+        ["new Date('18 Sep 2021 14:05:00 GMT+2')", "Stänger snart"], #lördag innan stängning
+        ["new Date('18 Sep 2021 15:05:00 GMT+2')", "Öppnar på måndag kl 10"], #lördag efter stängning
+        
+        ["new Date('19 Sep 2021 9:25:00 GMT+2')", "Öppnar imorgon kl 10"], #söndag innan strax öppning
+        ["new Date('19 Sep 2021 9:55:00 GMT+2')", "Öppnar imorgon kl 10"], #söndag innan snart öppning
+        ["new Date('19 Sep 2021 10:05:00 GMT+2')", "Öppnar imorgon kl 10"], #söndag efter öppning
+        ["new Date('19 Sep 2021 15:05:00 GMT+2')", "Öppnar imorgon kl 10"], #söndag innan stängning
+        ["new Date('19 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl 10"], #söndag efter stängning
+
+        ["new Date('13 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 10"], # måndag midnatt
+        ["new Date('14 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 10"], # tisdag midnatt
+        ["new Date('15 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 10"], # onsdag midnatt
+        ["new Date('16 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 10"], # torsdag midnatt
+        ["new Date('17 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 10"], # fredag midnatt
+        ["new Date('18 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 12"], # lördag midnatt
+        ["new Date('19 Sep 2021 00:00:00 GMT+2')", "Öppnar imorgon kl 10"] # söndag midnatt
+    ]
+    for i in dates:
+        codeToExecute = "liveOpeningHours("+ i[0] +")"
+        print(codeToExecute)
+        driver.execute_script(codeToExecute)
+        checkForText(i[1])
+
 #Screenshots
 def screenShots(resolutions):
 
@@ -111,6 +171,8 @@ checkForOpeningHours()
 checkForAddress()
 checkForContact()
 headerInfo()
+
+openingHourslive()
 
 driver.close()
 

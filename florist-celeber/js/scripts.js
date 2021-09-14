@@ -1,8 +1,9 @@
 // Scripts// 
-
+document.getElementById('mainNav').style.visibility = 'visible';
+document.getElementById('mainNav').classList.remove('noJs');
 window.addEventListener('DOMContentLoaded', event => {
 
-    document.getElementById('mainNav').style.visibility = 'visible';
+    
 
     // Navbar shrink function
     var navbarShrink = function () {
@@ -173,5 +174,5 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         }     
     }
-    checkTime();   
-});
+    checkTime();  
+})
