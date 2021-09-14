@@ -14,6 +14,7 @@
 - Other comments if needed
 - Reviewed by teammate
 - Committed to GitHub
+- Works well without JavaScript
 
 ### Tests
 - Tests made
