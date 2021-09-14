@@ -125,9 +125,11 @@
 #liveOpeningHours{
 
 padding-top: 10px;
-font-size: 32px;
+font-size: 24px;
 max-width: 295px;
 margin: 0 auto;
+padding-bottom: 16px;
+color: #FFC800;
 }
 
 @media screen and (max-width: 1000px){

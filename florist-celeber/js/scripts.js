@@ -1,10 +1,78 @@
 // Scripts// 
 document.getElementById('mainNav').style.visibility = 'visible';
 document.getElementById('mainNav').classList.remove('noJs');
+
+//Checks and changes the liveOpeningHours
+function liveOpeningHours(date) {
+    const standardOpen = 'Öppnar idag kl 10';
+    const standardOpenTomorrow = 'Öppnar imorgon kl 10';
+    const openMonday = 'Öppnar på måndag kl 10';
+    const openSoon = 'Öppnar snart';
+    const closeSoon = 'Stänger snart';
+    const open = 'Öppet just nu';
+    const openTomorrowSaturday = 'Öppnar imorgon kl 12';
+    const openSaturday = 'Öppnar idag kl 12'
+    const day = date.getDay();
+    const hours = date.getHours();
+    const min = date.getMinutes();
+    //The diffrent outcomes
+    switch (day) {
+        case 5: //Friday
+            if (((hours == 9) && (min <= 30)) || (hours < 9)) {
+                showUserLiveTime(standardOpen);
+            } else if (hours >= 16) {
+                showUserLiveTime(openTomorrowSaturday);
+            } else if ((hours == 9) && (min > 30)) {
+                showUserLiveTime(openSoon);
+            } else if (hours == 15) {
+                showUserLiveTime(closeSoon);
+            } else {
+                showUserLiveTime(open);
+            }
+            break;
+        case 6: //Saturday
+            if (((hours == 11) && (min <= 30)) || (hours < 11)) {
+                showUserLiveTime(openSaturday);
+            } else if (hours >= 15) {
+                showUserLiveTime(openMonday);
+            } else if ((hours == 11) && (min > 30)) {
+                showUserLiveTime(openSoon);
+            } else if (hours == 14) {
+                showUserLiveTime(closeSoon);
+            } else {
+                showUserLiveTime(open);
+            }
+            break;
+        case 0: //Sunday
+            showUserLiveTime(standardOpenTomorrow);
+            break;
+        default :
+            if (((hours == 9) && (min <= 30)) || (hours < 9)) {
+                showUserLiveTime(standardOpen);
+            } else if (hours >= 16) {
+                showUserLiveTime(standardOpenTomorrow);
+            } else if ((hours == 9) && (min > 30)) {
+                showUserLiveTime(openSoon);
+            } else if (hours == 15) {
+                showUserLiveTime(closeSoon);
+            } else {
+                showUserLiveTime(open);
+            }
+    }
+}
+//Shows it to the user
+function showUserLiveTime(msg) {
+    let open = document.getElementById('liveOpeningHours');
+    open.innerHTML = msg;
+}
+// Updates the live time every minute so that the info is accurate
+setInterval(function() {
+    liveOpeningHours(new Date());
+}, 6000)
+
+liveOpeningHours(new Date());
+
 window.addEventListener('DOMContentLoaded', event => {
-
-    
-
     // Navbar shrink function
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
@@ -54,125 +122,4 @@ window.addEventListener('DOMContentLoaded', event => {
     if(window.innerHeight <= 650) {
         mastheadContainer.scrollIntoView();
     }
-
-    //
-    function getDay() {
-        let currentDay = new Date();
-        let weekDay = currentDay.getDay();
-
-        switch(weekDay) {
-            case 0 :
-                return getHours(currentDay, 'söndag');
-
-            case 6 :
-                return getHours(currentDay, 'lördag');
-
-            default :
-                return getHours(currentDay, 'vardag');
-        }
-    }
-
-    //
-    function getHours(date, day) {
-       
-        let dayHours = date.getHours();
-
-        if(day == 'vardag') {
-            if (dayHours >= 10 && dayHours < 16) {
-                return 'öppet';
-            }
-            return 'stängt';
-        }
-        if(day == 'Lördag') {
-            if (dayHours >= 12 && dayHours < 15) {
-                return 'öppet';
-            }
-            return 'stängtLördag';
-        }
-        if(day == 'söndag') {
-            return 'söndag';
-        }
-    }
-
-    //
-    function checkTime() {
-        const status = getDay();
-        if(status == 'öppet') {
-            document.getElementById('liveOpeningHours').innerHTML = 'Vi har just nu öppet';
-            return;
-        }
-        if(status == 'stängt') {
-            document.getElementById('liveOpeningHours').innerHTML = ` Vi har just nu stängt, vi öppnar om ${timeLeft()}`;
-            return;
-        }
-        if(status == 'stängtLördag') {
-            document.getElementById('liveOpeningHours').innerHTML = ` Vi har just nu stängt, vi öppnar om ${timeLeft()}`;
-            return;
-        }
-        document.getElementById('liveOpeningHours').innerHTML = 'Vi öppnar på måndag kl. 10:00';
-        
-    }
-
-    //
-    function timeLeft() {
-        let currentDate = new Date();
-        let dayHours = currentDate.getHours();
-        let dayMinutes = currentDate.getMinutes();
-        const status = getDay();
-        //
-        if(status == 'stängt') {
-            if(dayHours < 10) {
-                let leftHours = 10 - dayHours;
-                let leftMinutes = leftHours*60 - dayMinutes;
-
-                 let hoursLeft = leftMinutes/60;
-                 let convertHours = Math.floor(hoursLeft);
-
-                let minutesLeft = (hoursLeft - convertHours) * 60;
-                let convertMinutes = Math.floor(minutesLeft);
-
-                 return `${convertHours} timmar och ${convertMinutes} minuter`;
-            }
-            if (dayHours >= 16) {
-                let leftHours = (23 - dayHours) + 11;
-                let leftMinutes = leftHours*60 - dayMinutes;
-
-                let hoursLeft = leftMinutes/60;
-                let convertHours = Math.floor(hoursLeft);
-
-                let minutesLeft = (hoursLeft - convertHours) * 60;
-                let convertMinutes = Math.floor(minutesLeft);
-
-                 return `${convertHours} timmar och ${convertMinutes} minuter`;
-            }
-        }
-        //
-        if(status == 'stängtLördag') {
-            if(dayHours < 12) {
-                let leftHours = 12 - dayHours;
-                let leftMinutes = leftHours*60 - dayMinutes;
-
-                 let hoursLeft = leftMinutes/60;
-                 let convertHours = Math.floor(hoursLeft);
-
-                let minutesLeft = (hoursLeft - convertHours) * 60;
-                let convertMinutes = Math.floor(minutesLeft);
-
-                 return `${convertHours} timmar och ${convertMinutes} minuter`;
-            }
-            if (dayHours >= 15) {
-                let leftHours = (23 - dayHours) + 13;
-                let leftMinutes = leftHours*60 - dayMinutes;
-
-                let hoursLeft = leftMinutes/60;
-                 let convertHours = Math.floor(hoursLeft);
-
-                let minutesLeft = (hoursLeft - convertHours) * 60;
-                let convertMinutes = Math.floor(minutesLeft);
-
-                 return `${convertHours} timmar och ${convertMinutes} minuter`;
-            }
-        }     
-    }
-    checkTime();  
 })
