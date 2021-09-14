@@ -31,17 +31,20 @@ def checkForOpeningHours():
     checkForText("Lördag")
     checkForText("10-16")
     checkForText("12-15")
+    print("checkForOpeningHours test completed")
 
 #Find us Info
 def checkForAddress():
     checkForText("Fjällgatan 32H")
     checkForText("981 39")
     checkForText("Kiruna")
+    print("checkForAdress test completed")
 
 #Contact us Info
 def checkForContact():
     checkForText("0630-555-555")
     checkForText("info@itgwebb.se")
+    print("checkForContact test completed")
 
 #Header Info
 def headerInfo():
@@ -49,11 +52,12 @@ def headerInfo():
     checkForText("ÖPPETTIDER")
     checkForText("HITTA OSS")
     checkForText("KONTAKTUPPGIFTER")
+    print("headerInfo test completed")
 
 #footer Info
 def footerInfo():
     checkForText("Copyright © Florist Celeber 2021")
-
+    print("footerInfo test completed")
 
 #OpeningHoursLive
 def openingHourslive():
@@ -87,7 +91,7 @@ def openingHourslive():
         ["new Date('17 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #fredag innan snart öppning
         ["new Date('17 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #fredag efter öppning
         ["new Date('17 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #fredag innan stängning
-        ["new Date('17 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl 12"], #fredag efter stängning
+        ["new Date('17 Sep 2021 18:05:00 GMT+2')", "Öppnar imorgon kl 12"], #fredag efter stängning
 
         ["new Date('18 Sep 2021 11:25:00 GMT+2')", "Öppnar idag kl 12"], #lördag innan strax öppning
         ["new Date('18 Sep 2021 11:55:00 GMT+2')", "Öppnar snart"], #lördag innan snart öppning
@@ -111,10 +115,10 @@ def openingHourslive():
     ]
     for i in dates:
         codeToExecute = "liveOpeningHours("+ i[0] +")"
-        print(codeToExecute)
+        print(i)
         driver.execute_script(codeToExecute)
         checkForText(i[1])
-
+    print("liveOpeningHours Test Completed")
 #Screenshots
 def screenShots(resolutions):
 
@@ -156,7 +160,7 @@ def screenShots(resolutions):
         driver.save_screenshot( "Screenshots/Image (" + str(res[0]) + " x " + str(res[1]) + ")" + dt_string + ".png")
         
         driver.close()
-
+    print("Screenshots completed")
 
 #----RUN TESTS
 # runs all tests for the website
