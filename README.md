@@ -1,5 +1,5 @@
 # florist-website
-
+## [Website](http://www.itgwebb.se/klass/webb2/christoffer/florist-celeber/)
 
 ## Definition of Done
 
@@ -38,7 +38,7 @@
 - Explanatory commit message
 
 ### Development Page
-- [Page](http://www.itgwebb.se/klass/webb2/christoffer/dev/)
+- [Page](http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber)
 #### How to use devpage
 - Code to devpage
 - Pull code from devpage to local
@@ -119,6 +119,10 @@
 
 #### index.html
 - Main file that structures the website.
+
+### Staff Page
+#### index.html
+- main file for subpage
 
 ### Favicon
 - favicon.ico
