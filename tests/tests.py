@@ -9,7 +9,7 @@ driver = webdriver.Chrome()
 driver.get("http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber")
 
 
-# a path to the site.
+# a path to the site..
 website = "http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber"
 
 # a path to subpage personalsida
