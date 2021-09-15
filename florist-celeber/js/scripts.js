@@ -1,6 +1,9 @@
 // Scripts// 
 document.getElementById('mainNav').style.visibility = 'visible';
 document.getElementById('mainNav').classList.remove('noJs');
+let url = window.location.href;
+url = url.split('/');
+const page = url[url.length - 2];
 
 //Checks and changes the liveOpeningHours
 function liveOpeningHours(date) {
@@ -65,12 +68,24 @@ function showUserLiveTime(msg) {
     let open = document.getElementById('liveOpeningHours');
     open.innerHTML = msg;
 }
-// Updates the live time every minute so that the info is accurate
-setInterval(function() {
-    liveOpeningHours(new Date());
-}, 6000)
+// Checks if you live in Sweden
+if (page == 'florist-celeber') {
+    fetch('https://extreme-ip-lookup.com/json/')
+    .then( res => res.json())
+    .then(response => {
+        console.log(response);
+        if (response.country === 'Sweden') {
+            liveOpeningHours(new Date());
+            // Updates the live time every minute so that the info is accurate
+            setInterval(function() {
+                liveOpeningHours(new Date());
+            }, 6000)
+        }
+    }).catch((data, status) => {
+        console.log('Request failed');
+    });    
+}
 
-liveOpeningHours(new Date());
 
 window.addEventListener('DOMContentLoaded', event => {
     // Navbar shrink function
@@ -80,9 +95,9 @@ window.addEventListener('DOMContentLoaded', event => {
             return;
         }
         if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
+            navbarCollapsible.classList.remove('navbar-shrink');
         } else {
-            navbarCollapsible.classList.add('navbar-shrink')
+            navbarCollapsible.classList.add('navbar-shrink');
         }
 
     };
@@ -110,12 +125,12 @@ window.addEventListener('DOMContentLoaded', event => {
     const navbarCollapse = document.getElementById('navbarResponsive');
     navbarMenu.onclick = function(){
         if (navbarCollapse.classList.contains('show')) {
-            navbarToggler.classList.remove('focus')
-            navbarCollapse.classList.remove('show')
+            navbarToggler.classList.remove('focus');
+            navbarCollapse.classList.remove('show');
             return
         }
-        navbarToggler.classList.add('focus')
-        navbarCollapse.classList.add('show')
+        navbarToggler.classList.add('focus');
+        navbarCollapse.classList.add('show');
     }
 
     const mastheadContainer = document.getElementById('mastheadContainer');

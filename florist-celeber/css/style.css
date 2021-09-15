@@ -46,7 +46,9 @@
 
 }
 
-
+.gap{
+    margin-bottom: 3rem !important;
+}
 
 .icon-container{
 
@@ -136,4 +138,44 @@ color: #FFC800;
     #mainNav{
         visibility: hidden;
     }
+}
+
+.staffImg-border{
+
+    display: inline-block;
+
+    height: 200px;
+
+    width: 200px;
+
+    margin-bottom: 1rem;
+
+}
+
+
+
+.staffImg-container{
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+
+.staffImg{
+
+    display: inline-block;
+
+    top: 50%;
+    
+    border-radius: 50%;
+
 }

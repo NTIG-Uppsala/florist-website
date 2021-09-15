@@ -76,8 +76,10 @@ def staffPageInfo():
 
 #staff page pictures
 def staffPagePictures():
-    driver.find_element_by_xpath('/html/body/section/div/div[2]/div[1]/div[1]/div/div/img')
-
+    driver.find_element_by_id("staff")#staff member 1
+    driver.find_element_by_id("staff")#staff member 2
+    driver.find_element_by_id("staff")#staff member 3
+    print("Staff page images test Completed")
 #OpeningHoursLive
 def openingHourslive():
 
