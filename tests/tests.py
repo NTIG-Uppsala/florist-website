@@ -13,7 +13,6 @@ driver.get("http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber")
 website = "http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber"
 
 # a path to subpage personalsida
-driver2 = webdriver.Chrome()
 staffPage = "http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber/personalsida"
 
 # resolution for screenshots
@@ -76,9 +75,9 @@ def staffPageInfo():
     print("Staff Page Info Test Completed")
 
 #staff page pictures
-
-
-
+def staffPagePictures():
+    driver.find_element_by_xpath('/html/body/section/div/div[2]/div[1]/div[1]/div/div/img')
+    
 #OpeningHoursLive
 def openingHourslive():
 
@@ -132,6 +131,7 @@ def openingHourslive():
         ["new Date('17 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 10"], # fredag midnatt
         ["new Date('18 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 12"], # lördag midnatt
         ["new Date('19 Sep 2021 00:00:00 GMT+2')", "Öppnar imorgon kl 10"] # söndag midnatt
+
     ]
     for i in dates:
         codeToExecute = "liveOpeningHours("+ i[0] +")"
@@ -199,12 +199,12 @@ headerInfo()
 
 openingHourslive()
 
-driver.close()
 
-driver2.get(staffPage)
+driver.get(staffPage)
 
 staffPageInfo()
+staffPagePictures()
 
-driver2.close()
+driver.close()
 screenShots(screenResolution)
 print("ALL TESTS PASSED!")
