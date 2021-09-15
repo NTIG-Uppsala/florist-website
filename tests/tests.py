@@ -6,10 +6,16 @@ from datetime import datetime
 import time
 
 driver = webdriver.Chrome()
-driver.get("http://www.itgwebb.se/klass/webb2/christoffer/dev/")
+driver.get("http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber")
+
 
 # a path to the site
-website = "http://www.itgwebb.se/klass/webb2/christoffer/dev/"
+website = "http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber"
+
+# a path to subpage personalsida
+driver2 = webdriver.Chrome()
+staffPage = "http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber/personalsida"
+
 # resolution for screenshots
 # d = desktop
 # m = mobile
@@ -58,6 +64,20 @@ def headerInfo():
 def footerInfo():
     checkForText("Copyright © Florist Celeber 2021")
     print("footerInfo test completed")
+
+#staff page info
+def staffPageInfo():
+    checkForText("Fredrik Ortqvist")
+    checkForText("Ägare")
+    checkForText("Örjan Johansson")
+    checkForText("Florist")
+    checkForText("Anna Pettersson")
+    checkForText("Hortonom")
+    print("Staff Page Info Test Completed")
+
+#staff page pictures
+
+
 
 #OpeningHoursLive
 def openingHourslive():
@@ -119,6 +139,7 @@ def openingHourslive():
         driver.execute_script(codeToExecute)
         checkForText(i[1])
     print("liveOpeningHours Test Completed")
+
 #Screenshots
 def screenShots(resolutions):
 
@@ -180,5 +201,10 @@ openingHourslive()
 
 driver.close()
 
+driver2.get(staffPage)
+
+staffPageInfo()
+
+driver2.close()
 screenShots(screenResolution)
 print("ALL TESTS PASSED!")
