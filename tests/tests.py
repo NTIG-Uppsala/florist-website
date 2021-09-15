@@ -57,6 +57,7 @@ def headerInfo():
     checkForText("ÖPPETTIDER")
     checkForText("HITTA OSS")
     checkForText("KONTAKTUPPGIFTER")
+    checkForText("PERSONAL")
     print("headerInfo test completed")
 
 #footer Info
