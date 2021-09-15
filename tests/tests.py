@@ -84,55 +84,55 @@ def staffPagePictures():
 def openingHourslive():
 
     dates = [
-        ["new Date('13 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl 10"], #måndag innan strax öppning
-        ["new Date('13 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #måndag innan snart öppning
-        ["new Date('13 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #måndag efter öppning
-        ["new Date('13 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #måndag innan stängning
-        ["new Date('13 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl 10"], #måndag efter stängning
+        ["new Date('13 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl 10"], #monday before just opening
+        ["new Date('13 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #monday before soon opening
+        ["new Date('13 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #monday after opening
+        ["new Date('13 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #monday before closing
+        ["new Date('13 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl 10"], #monday after closing
 
-        ["new Date('14 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl 10"], #tisdag innan strax öppning
-        ["new Date('14 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #tisdag innan snart öppning
-        ["new Date('14 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #tisdag efter öppning
-        ["new Date('14 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #tisdag innan stängning
-        ["new Date('14 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl 10"], #tisdag efter stängning
+        ["new Date('14 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl 10"], #tuesday before just opening
+        ["new Date('14 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #tuesday before soon opening
+        ["new Date('14 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #tuesday after opening
+        ["new Date('14 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #tuesday before closing
+        ["new Date('14 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl 10"], #tuesday after closing
 
-        ["new Date('15 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl 10"], #onsdag innan strax öppning
-        ["new Date('15 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #onsdag innan snart öppning
-        ["new Date('15 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #onsdag efter öppning
-        ["new Date('15 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #onsdag innan stängning
-        ["new Date('15 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl 10"], #onsdag efter stängning
+        ["new Date('15 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl 10"], #wednesday before just opening
+        ["new Date('15 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #wednesday before soon opening
+        ["new Date('15 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #wednesday after opening
+        ["new Date('15 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #wednesday before closing
+        ["new Date('15 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl 10"], #wednesday after closing
 
-        ["new Date('16 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl 10"], #torsdag innan strax öppning
-        ["new Date('16 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #torsdag innan snart öppning
-        ["new Date('16 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #torsdag efter öppning
-        ["new Date('16 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #torsdag innan stängning
-        ["new Date('16 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl 10"], #torsdag efter stängning
+        ["new Date('16 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl 10"], #thursday before just opening
+        ["new Date('16 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #thursday before soon opening
+        ["new Date('16 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #thursday after opening
+        ["new Date('16 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #thursday before closing
+        ["new Date('16 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl 10"], #thursday after closing
 
-        ["new Date('17 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl 10"], #fredag innan strax öppning
-        ["new Date('17 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #fredag innan snart öppning
-        ["new Date('17 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #fredag efter öppning
-        ["new Date('17 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #fredag innan stängning
-        ["new Date('17 Sep 2021 18:05:00 GMT+2')", "Öppnar imorgon kl 12"], #fredag efter stängning
+        ["new Date('17 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl 10"], #friday before just opening
+        ["new Date('17 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #friday before soon opening
+        ["new Date('17 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #friday after opening
+        ["new Date('17 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #friday before closing
+        ["new Date('17 Sep 2021 18:05:00 GMT+2')", "Öppnar imorgon kl 12"], #friday after closing
 
-        ["new Date('18 Sep 2021 11:25:00 GMT+2')", "Öppnar idag kl 12"], #lördag innan strax öppning
-        ["new Date('18 Sep 2021 11:55:00 GMT+2')", "Öppnar snart"], #lördag innan snart öppning
-        ["new Date('18 Sep 2021 12:05:00 GMT+2')", "Öppet just nu"], #lördag efter öppning
-        ["new Date('18 Sep 2021 14:05:00 GMT+2')", "Stänger snart"], #lördag innan stängning
-        ["new Date('18 Sep 2021 15:05:00 GMT+2')", "Öppnar på måndag kl 10"], #lördag efter stängning
+        ["new Date('18 Sep 2021 11:25:00 GMT+2')", "Öppnar idag kl 12"], #saturday before just opening
+        ["new Date('18 Sep 2021 11:55:00 GMT+2')", "Öppnar snart"], #saturday before soon opening
+        ["new Date('18 Sep 2021 12:05:00 GMT+2')", "Öppet just nu"], #saturday after opening
+        ["new Date('18 Sep 2021 14:05:00 GMT+2')", "Stänger snart"], #saturday before closing
+        ["new Date('18 Sep 2021 15:05:00 GMT+2')", "Öppnar på måndag kl 10"], #saturday after closing
         
-        ["new Date('19 Sep 2021 9:25:00 GMT+2')", "Öppnar imorgon kl 10"], #söndag innan strax öppning
-        ["new Date('19 Sep 2021 9:55:00 GMT+2')", "Öppnar imorgon kl 10"], #söndag innan snart öppning
-        ["new Date('19 Sep 2021 10:05:00 GMT+2')", "Öppnar imorgon kl 10"], #söndag efter öppning
-        ["new Date('19 Sep 2021 15:05:00 GMT+2')", "Öppnar imorgon kl 10"], #söndag innan stängning
-        ["new Date('19 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl 10"], #söndag efter stängning
+        ["new Date('19 Sep 2021 9:25:00 GMT+2')", "Öppnar imorgon kl 10"], #sunday before just opening
+        ["new Date('19 Sep 2021 9:55:00 GMT+2')", "Öppnar imorgon kl 10"], #sunday before soon opening
+        ["new Date('19 Sep 2021 10:05:00 GMT+2')", "Öppnar imorgon kl 10"], #sunday after opening
+        ["new Date('19 Sep 2021 15:05:00 GMT+2')", "Öppnar imorgon kl 10"], #sunday before closing
+        ["new Date('19 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl 10"], #sunday after closing
 
-        ["new Date('13 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 10"], # måndag midnatt
-        ["new Date('14 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 10"], # tisdag midnatt
-        ["new Date('15 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 10"], # onsdag midnatt
-        ["new Date('16 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 10"], # torsdag midnatt
-        ["new Date('17 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 10"], # fredag midnatt
-        ["new Date('18 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 12"], # lördag midnatt
-        ["new Date('19 Sep 2021 00:00:00 GMT+2')", "Öppnar imorgon kl 10"] # söndag midnatt
+        ["new Date('13 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 10"], # monday midnight
+        ["new Date('14 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 10"], # tuesday midnight
+        ["new Date('15 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 10"], # wednesday midnight
+        ["new Date('16 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 10"], # thursday midnight
+        ["new Date('17 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 10"], # friday midnight
+        ["new Date('18 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl 12"], # saturday midnight
+        ["new Date('19 Sep 2021 00:00:00 GMT+2')", "Öppnar imorgon kl 10"] # sunday midnight
 
     ]
     for i in dates:
@@ -200,7 +200,6 @@ checkForContact()
 headerInfo()
 
 openingHourslive()
-
 
 driver.get(staffPage)
 
