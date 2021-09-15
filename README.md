@@ -158,10 +158,10 @@
 ```
 #!/bin/bash
 
+PATH TO BROWSER "https://validator.nu/?doc=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fdev%2Fflorist-celeber" #HTML
+PATH TO BROWSER "https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fdev%2Fflorist-celeber%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" #CSS
+PATH TO BROWSER "https://validator.w3.org/checklink?uri=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fdev%2Fflorist-celeber&hide_type=all&depth=&check=Check" #Links on webpage
+PATH TO BROWSER "https://codebeautify.org/jsvalidate?url=http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber/js/scripts.js" #JS
+PATH TO BROWSER "https://validator.nu/?doc=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fdev%2Fflorist-celeber%2Fpersonalsida" #HTML for staff-page
 
-
-PATH TO BROWSER "https://validator.nu/?doc=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fdev" #HTML
-PATH TO BROWSER "http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fdev%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=" #CSS
-PATH TO BROWSER "https://validator.w3.org/checklink?uri=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fdev&hide_type=all&depth=&check=Check" #Links on webpage
-PATH TO BROWSER "https://codebeautify.org/jsvalidate?url=http://www.itgwebb.se/klass/webb2/christoffer/dev/js/scripts.js" #JS
 ```
