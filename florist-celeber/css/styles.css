@@ -11277,6 +11277,8 @@ textarea.form-control-lg {
 }
 html {
   scroll-padding-top: 4.5rem;
+  overflow: -moz-scrollbars-vertical; 
+  overflow-y: scroll;
 }
 
 body {

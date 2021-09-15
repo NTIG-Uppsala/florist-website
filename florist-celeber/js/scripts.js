@@ -5,6 +5,9 @@ let url = window.location.href;
 url = url.split('/');
 const page = url[url.length - 2];
 
+//Menu with no JS
+document.getElementById('noJsMenu').classList.add('menuNoJs');
+
 //Checks and changes the liveOpeningHours
 function liveOpeningHours(date) {
     const standardOpen = 'Öppnar idag kl 10';

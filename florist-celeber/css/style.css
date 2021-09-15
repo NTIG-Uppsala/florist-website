@@ -176,6 +176,42 @@ color: #FFC800;
 
     top: 50%;
     
-    border-radius: 50%;
+    border-radius: 25%;
 
+}
+
+
+.menuNoJs{
+
+    visibility: hidden;
+    
+}
+
+
+.noMenuJs{
+
+    background-color: #212529;
+    display: block;
+    max-height: 30px;
+    
+
+}
+
+a:link{
+    text-decoration: none !important;
+}
+
+.noJsUl{
+    text-align: center !important;
+}
+
+.menuLi{
+    display: inline !important;
+    padding-right: 5px !important;
+}
+
+@media screen and(min-width : 1000px){
+    #noJsMenu {
+        visibility: hidden;
+    }
 }
