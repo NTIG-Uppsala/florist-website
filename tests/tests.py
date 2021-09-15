@@ -9,7 +9,7 @@ driver = webdriver.Chrome()
 driver.get("http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber")
 
 
-# a path to the site
+# a path to the site.
 website = "http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber"
 
 # a path to subpage personalsida
@@ -77,7 +77,7 @@ def staffPageInfo():
 #staff page pictures
 def staffPagePictures():
     driver.find_element_by_xpath('/html/body/section/div/div[2]/div[1]/div[1]/div/div/img')
-    
+
 #OpeningHoursLive
 def openingHourslive():
 
