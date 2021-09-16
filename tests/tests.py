@@ -191,13 +191,13 @@ def screenShots(resolutions):
         # sleeps for 3 seconds to make sure site is fully loaded!
         time.sleep(3) 
 
-        driver.save_screenshot( "Screenshots/Image (" + dt_string  + str(res[0]) + " x " + str(res[1]) + ")" + ".jpg")
+        driver.save_screenshot( "../../Screenshots/Image (" + dt_string  + str(res[0]) + " x " + str(res[1]) + ")" + ".jpg")
         
         driver.get(staffPage)
 
         time.sleep(3) 
 
-        driver.save_screenshot( "Screenshots/Image (" + dt_string + str(res[0]) + " x " + str(res[1]) + ")" + " staffpage" + ".jpg")
+        driver.save_screenshot( "../../Screenshots/Image (" + dt_string + str(res[0]) + " x " + str(res[1]) + ")" + " staffpage" + ".jpg")
 
         driver.close()
 
