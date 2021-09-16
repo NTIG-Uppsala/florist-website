@@ -6,7 +6,7 @@
 ### General
 - Website published to the web
 - All files listed in README.md
-- Try not to commit files with known errors, the day before deadline
+- Try not to commit files with known errors, the day before the deadline
 
 ### Code
 - Code refactored
@@ -39,12 +39,12 @@
 
 ### Development Page
 - [Page](http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber)
-#### How to use devpage
-- Code to devpage
-- Pull code from devpage to local
+#### How to use DevPage
+- Code to DevPage
+- Pull code from DevPage to local
 - Commit local to GitHub **git commit** (Do not use -m "")
-- Tests will run in pre-commit on devpage
-- If errors in validation, terminate commit in VIM, then **git reset --soft HEAD**
+- Tests will run in pre-commit on DevPage
+- If errors in the validation, terminate commit in VIM, then **git reset --soft HEAD**
 - If validation passes, write a message in VIM and commit
 - Code will now be live
 
@@ -56,9 +56,9 @@
 ## Programming Language
 - English function names and variable names
 - English comments
-- Comments before function
-- If comment mid function write it 4 spaces after semicolon
-- camelCasing on functions, variable names, id and more
+- Comments before functions
+- If comment mid function write it 4 spaces after a semicolon
+- camelCasing on functions, variable names, id, and more
 - File name camelCasing
 
 ### HTML
@@ -99,7 +99,7 @@
 #### Standard
 - Use ' '
 - Let/Const for variables
-- Opening curly bracket end of first line
+- Opening curly bracket at the end of a statement line
 - Use one space before the opening bracket
 - Place the curly closing bracket on a new line
 - Arrays, every item new line
@@ -154,7 +154,7 @@
 
 ### Tests
 #### tests.py
-- Runs all the tests and take screenshots in different resolutions and saves them in a separate folder.
+- Runs all the tests and takes screenshots in different resolutions and saves them in a separate folder.
 
 
 ### Pre-commit Tests for devpage
@@ -164,7 +164,7 @@
 
 PATH TO BROWSER "https://validator.nu/?doc=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fdev%2Fflorist-celeber" #HTML
 PATH TO BROWSER "https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fdev%2Fflorist-celeber%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" #CSS
-PATH TO BROWSER "https://validator.w3.org/checklink?uri=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fdev%2Fflorist-celeber&hide_type=all&depth=&check=Check" #Links on webpage
+PATH TO BROWSER "https://validator.w3.org/checklink?uri=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fdev%2Fflorist-celeber&hide_type=all&depth=&check=Check" #Links on the webpages
 PATH TO BROWSER "https://codebeautify.org/jsvalidate?url=http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber/js/scripts.js" #JS
 PATH TO BROWSER "https://validator.nu/?doc=http%3A%2F%2Fwww.itgwebb.se%2Fklass%2Fwebb2%2Fchristoffer%2Fdev%2Fflorist-celeber%2Fpersonalsida" #HTML for staff-page
 
