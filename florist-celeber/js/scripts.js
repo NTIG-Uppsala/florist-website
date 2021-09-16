@@ -81,7 +81,6 @@ if (page == 'florist-celeber') {
     fetch('https://extreme-ip-lookup.com/json/')
     .then( res => res.json())
     .then(response => {
-        console.log(response);
         if (response.country === 'Sweden') {
             liveOpeningHours(new Date());
             // Updates the live time every minute so that the info is accurate
@@ -90,7 +89,7 @@ if (page == 'florist-celeber') {
             }, 6000)
         }
     }).catch((data, status) => {
-        console.log('Request failed');
+        console.log('Request failed'); 
     });    
 }
 
