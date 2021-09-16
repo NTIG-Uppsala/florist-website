@@ -162,7 +162,7 @@ def screenShots(resolutions):
         # adds a time stamp for the screenshots
         dt_string = now.strftime(" , %d-%m-%Y , %Hh %Mm %Ss")
 
-        # checks if the resolution is for mobile or desktop
+        # checks if the resolution is for mobile or desktop.
         if(res[2] == "d"):
             # sets the resolution for the desktop emulation
             emulation = {
