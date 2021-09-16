@@ -5,6 +5,11 @@ let url = window.location.href;
 url = url.split('/');
 const page = url[url.length - 2];
 
+const mastheadContainer = document.getElementById('mastheadContainer');
+if(window.innerHeight <= 650) {
+    mastheadContainer.scrollIntoView();
+}
+
 //Menu with no JS
 document.getElementById('noJsMenu').classList.add('menuNoJs');
 
@@ -134,10 +139,5 @@ window.addEventListener('DOMContentLoaded', event => {
         }
         navbarToggler.classList.add('focus');
         navbarCollapse.classList.add('show');
-    }
-
-    const mastheadContainer = document.getElementById('mastheadContainer');
-    if(window.innerHeight <= 650) {
-        mastheadContainer.scrollIntoView();
     }
 })
