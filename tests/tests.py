@@ -53,6 +53,8 @@ def checkForContact():
 
 #Header Info
 def headerInfo():
+    checkForText("Välkommen till")
+    checkForText("FLORIST CELEBER")
     checkForText("INFO")
     checkForText("ÖPPETTIDER")
     checkForText("HITTA OSS")
@@ -67,6 +69,8 @@ def footerInfo():
 
 #staff page info
 def staffPageInfo():
+    checkForText("Detta är")
+    checkForText("VÅR UNDERBARA PERSONAL")
     checkForText("Fredrik Örtqvist")
     checkForText("Ägare")
     checkForText("Örjan Johansson")
