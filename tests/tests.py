@@ -151,7 +151,7 @@ def openingHourslive():
         print(i)
         driver.execute_script(codeToExecute)
         checkForText(i[1])
-    print("liveOpeningHours Test Completed")
+    print("liveOpeningHours Test Completed ")
 
 #Screenshots
 def screenShots(resolutions):
