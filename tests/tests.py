@@ -38,6 +38,16 @@ def checkForOpeningHours():
     checkForText("12-15")
     print("checkForOpeningHours test completed")
 
+#Welcome message 
+def checkForWelcomeMessage():
+    checkForText("Välkommen till")
+    checkForText("FLORIST CELEBER")
+    print("checkForWelcomeMessage test completed")
+
+def checkForStaffIntroduction():
+    checkForText("Detta är")
+    checkForText("VÅR UNDERBARA PERSONAL")
+    print("checkForStaffIntroduction test completed")
 #Find us Info
 def checkForAddress():
     checkForText("Fjällgatan 32H")
@@ -210,18 +220,19 @@ checkForAddress()
 checkForContact()
 headerInfo()
 footerInfo()
-
+checkForWelcomeMessage()
 openingHourslive()
 
 driver.get(staffPage)
 time.sleep(3) 
 
+testTitleName("Florist Celeber")
 headerInfo()
 footerInfo()
 
 staffPageInfo()
 staffPagePictures()
-
+checkForStaffIntroduction()
 driver.close()
 screenShots(screenResolution)
 print("ALL TESTS PASSED!")
