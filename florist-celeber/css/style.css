@@ -192,7 +192,7 @@ color: #FFC800;
 
     background-color: #212529;
     display: block;
-    max-height: 30px;
+    max-height: 50px;
     
 
 }
@@ -210,8 +210,21 @@ a:link{
     padding-right: 5px !important;
 }
 
-@media screen and(min-width : 1000px){
+@media screen and (min-width: 1000px){
     #noJsMenu {
         visibility: hidden;
+    }
+}
+
+.a-link:hover{
+    color: #cca000;
+}
+.a-link{
+    color: #FFF;
+}
+
+@media screen and (max-width: 375px) {
+    .longWord {
+        margin-left: -10px;
     }
 }
