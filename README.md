@@ -144,7 +144,7 @@
 #### styles.css
 - All styles for the elements (Bootstrap).
 #### style.css
-- Our own css code.
+- Our own CSS code.
 
 ### JavaScript
 #### script.js
@@ -154,7 +154,7 @@
 
 ### Tests
 #### tests.py
-- Runs all the tests and take screenshots in different resolutions and saves them in a seperate folder.
+- Runs all the tests and take screenshots in different resolutions and saves them in a separate folder.
 
 
 ### Pre-commit Tests for devpage
