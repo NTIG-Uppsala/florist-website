@@ -217,7 +217,7 @@ a:link{
     padding-right: 5px !important;
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 990px){
     #noJsMenu {
         visibility: hidden;
     }
