@@ -18,7 +18,7 @@ staffPage = "http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber/p
 # resolution for screenshots
 # d = desktop
 # m = mobile
-screenResolution = [[1920, 1080, "d"], [2560, 1440, "d"], [1080, 1920, "m"], [360, 640, "m"]]
+screenResolution = [[1920, 1080, "d"], [2560, 1440, "d"], [1080, 1920, "m"], [360, 640, "m"], [640, 360, "m"], [812, 375 ,"m"]]
 
 #----TESTS----
 
