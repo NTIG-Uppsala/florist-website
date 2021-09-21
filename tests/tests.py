@@ -108,7 +108,7 @@ def productsInfo():
     print("productsInfo test completed")
 
 def productsImages():
-    driver.find_element_by_xpath("//img[@alt='Sommarbukettt']") #Locates The Alt @ in all Image @ If the alt Is correct the image shall be there. Proof can be seen In screenshot
+    driver.find_element_by_xpath("//img[@alt='Sommarbukett']") #Locates The Alt @ in all Image @ If the alt Is correct the image shall be there. Proof can be seen In screenshot
     driver.find_element_by_xpath("//img[@alt='Bröllopsbruketter']")
     driver.find_element_by_xpath("//img[@alt='Begravningskrans']")
     driver.find_element_by_xpath("//img[@alt='Höstbukett']")
@@ -351,12 +351,16 @@ headerInfo()
 footerInfo()
 checkForWelcomeMessage()
 
+openingHourslive()
+
 productsInfo()
 productsImages()
 
+
+
 socialMediaLinks()
 
-openingHourslive()
+
 
 # switch Page to staff page
 driver.get(staffPage)
