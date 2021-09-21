@@ -17,68 +17,54 @@ if (mobileCheck()) {
     mastheadContainer.scrollIntoView();
 }
 
-//Checks and changes the liveOpeningHours
+//Display for the user when it's open
 function liveOpeningHours(date) {
-    const standardOpen = 'Öppnar idag kl 10';
-    const standardOpenTomorrow = 'Öppnar imorgon kl 10';
-    const openMonday = 'Öppnar på måndag kl 10';
-    const openSoon = 'Öppnar snart';
-    const closeSoon = 'Stänger snart';
-    const open = 'Öppet just nu';
-    const openTomorrowSaturday = 'Öppnar imorgon kl 12';
-    const openSaturday = 'Öppnar idag kl 12'
+    const openHours = [
+        [0, 0], //Sun
+        [10, 16], //Mon
+        [10, 16], //Tue
+        [10, 16], //Wed
+        [10, 16], //Thu
+        [10, 16], //Friday
+        [12, 15], //Sat
+        [0,0]
+    ]
+    document.getElementById('liveOpeningHours').innerHTML = getTimeMsg(openHours, date);
+}
+
+//From time in timearray get msg
+function getTimeMsg(businessDays, date) {
     const day = date.getDay();
     const hours = date.getHours();
     const min = date.getMinutes();
-    //The diffrent outcomes
-    switch (day) {
-        case 5: //Friday
-            if (((hours == 9) && (min <= 30)) || (hours < 9)) {
-                showUserLiveTime(standardOpen);
-            } else if (hours >= 16) {
-                showUserLiveTime(openTomorrowSaturday);
-            } else if ((hours == 9) && (min > 30)) {
-                showUserLiveTime(openSoon);
-            } else if (hours == 15) {
-                showUserLiveTime(closeSoon);
-            } else {
-                showUserLiveTime(open);
-            }
-            break;
-        case 6: //Saturday
-            if (((hours == 11) && (min <= 30)) || (hours < 11)) {
-                showUserLiveTime(openSaturday);
-            } else if (hours >= 15) {
-                showUserLiveTime(openMonday);
-            } else if ((hours == 11) && (min > 30)) {
-                showUserLiveTime(openSoon);
-            } else if (hours == 14) {
-                showUserLiveTime(closeSoon);
-            } else {
-                showUserLiveTime(open);
-            }
-            break;
-        case 0: //Sunday
-            showUserLiveTime(standardOpenTomorrow);
-            break;
-        default :
-            if (((hours == 9) && (min <= 30)) || (hours < 9)) {
-                showUserLiveTime(standardOpen);
-            } else if (hours >= 16) {
-                showUserLiveTime(standardOpenTomorrow);
-            } else if ((hours == 9) && (min > 30)) {
-                showUserLiveTime(openSoon);
-            } else if (hours == 15) {
-                showUserLiveTime(closeSoon);
-            } else {
-                showUserLiveTime(open);
-            }
+    const today = businessDays[day];
+    const openMsg = {
+        closeSoon:`Stänger snart`,
+        open:`Öppet just nu`,
+        openSoon:`Öppnar snart`,
+        openToday:`Öppnar idag kl. ${today[0]}`,
+        closedUntilMonday:`Öppnar på måndag kl. ${businessDays[1][0]}`,
+        openTomorrow:`Öppnar imorgon kl. ${businessDays[day + 1][0]}` //businessDays[(day + 1)][0] next day open
     }
-}
-//Shows it to the user
-function showUserLiveTime(msg) {
-    let open = document.getElementById('liveOpeningHours');
-    open.innerHTML = msg;
+    if (today[0] == 0 && today[1] == 0) { //Closed Days ex sunday in this case
+        return openMsg.openTomorrow;
+    }
+    if (hours >= today[1] && businessDays[day + 1] == '0,0') { //Checks if closed today, and if tomorrow is closed. In this case if its saturday
+        return openMsg.closedUntilMonday;
+    }
+    if ((hours == today[0] - 1) && (min >= 30)) { //If it's 30 min before opening
+        return openMsg.openSoon;
+    }
+    if (((hours == today[0] - 1) && (min < 30)) || (hours < today[0])) { // If it's more then 30 min before opening
+        return openMsg.openToday;
+    }
+    if (hours >= today[1]) { // If it's closed and its open tomorrow
+        return openMsg.openTomorrow;
+    }
+    if (hours == today[1] - 1) {
+        return openMsg.closeSoon;
+    }
+    return openMsg.open;
 }
 // Checks if you are in the right timezone
 const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
