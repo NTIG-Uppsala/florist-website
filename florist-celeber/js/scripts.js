@@ -6,8 +6,7 @@ document.getElementById('mainNav').classList.remove('noJs');
 document.getElementById('noJsMenu').classList.add('menuNoJs');
 
 
-//Landscape fix
-//NEEDS SOME WORK
+//Landscape scrolle
 const mastheadContainer = document.getElementById('mastheadContainer');
 function mobileCheck() {
     let check = false;
@@ -15,7 +14,6 @@ function mobileCheck() {
     return check;
 };
 if (mobileCheck()) {
-    console.log('YE AHWDII)=');
     mastheadContainer.scrollIntoView();
 }
 

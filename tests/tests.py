@@ -12,11 +12,6 @@ from selenium.webdriver.opera.webdriver import OperaDriver
 
 
 
-driver = webdriver.Chrome(executable_path="C:/webdrivers/chromedriver.exe")
-driver.maximize_window()
-driver.get("http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber")
-
-
 # a path to the site..
 website = "http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber"
 
@@ -340,6 +335,9 @@ def screenShots(resolutions):
 
 #----RUN TESTS
 #CHROME
+driver = webdriver.Chrome(executable_path="C:/webdrivers/chromedriver.exe")
+driver.maximize_window()
+
 # runs all tests for the website
 driver.get(website)
 time.sleep(3)
