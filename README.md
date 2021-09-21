@@ -156,6 +156,13 @@
 #### tests.py
 - Runs all the tests and takes screenshots in different resolutions and saves them in a separate folder.
 
+### Webdrivers
+- chromedriver.exe
+- geckodriver.exe
+- operadriver.exe
+- msedgedriver.exe 
+- msedgedriver requieres the following addon
+- py -m pip install msedge-selenium-tools selenium==3.141
 
 ### Pre-commit Tests for devpage
 #### In .git/hooks/pre-commit
