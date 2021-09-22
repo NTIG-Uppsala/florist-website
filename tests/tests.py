@@ -18,6 +18,9 @@ website = "http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber"
 # a path to subpage personalsida
 staffPage = "http://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber/personalsida"
 
+# a path to subpage products
+
+
 # resolution for screenshots
 # d = desktop
 # m = mobile
@@ -90,31 +93,28 @@ def staffPageInfo():
 
 #producs test
 def productsInfo():
-    checkForText("Sommarbukett")
+    checkForText("Sommarbuketter")
     checkForText("Från")
     checkForText("200 kr")
-    checkForText("Bröllopsbruketter")
+    checkForText("Bröllopsbuketter")
     checkForText("1200 kr")
     checkForText("Begravningskrans")
     checkForText("800 kr")
-    checkForText("Höstbukett")
+    checkForText("Höstbuketter")
     checkForText("400 kr")
     checkForText("Rosor 10-pack")
     checkForText("150 kr")
     checkForText("Tulpaner 10-pack")
     checkForText("100 kr")
-    checkForText("Konsultation 30 min")
-    checkForText("250 kr")
     print("productsInfo test completed")
 
 def productsImages():
-    driver.find_element_by_xpath("//img[@alt='Sommarbukett']") #Locates The Alt @ in all Image @ If the alt Is correct the image shall be there. Proof can be seen In screenshot
-    driver.find_element_by_xpath("//img[@alt='Bröllopsbruketter']")
+    driver.find_element_by_xpath("//img[@alt='Sommarbuketter']") #Locates The Alt @ in all Image @ If the alt Is correct the image shall be there. Proof can be seen In screenshot
+    driver.find_element_by_xpath("//img[@alt='Bröllopsbuketter']")
     driver.find_element_by_xpath("//img[@alt='Begravningskrans']")
-    driver.find_element_by_xpath("//img[@alt='Höstbukett']")
+    driver.find_element_by_xpath("//img[@alt='Höstbuketter']")
     driver.find_element_by_xpath("//img[@alt='Rosor 10-pack']")
     driver.find_element_by_xpath("//img[@alt='Tulpaner 10-pack']")
-    driver.find_element_by_xpath("//img[@alt='Konsultation 30 min']") 
     print("ProductsImages test completed")
 
 #staff page pictures
@@ -355,8 +355,6 @@ openingHourslive()
 
 productsInfo()
 productsImages()
-
-
 
 socialMediaLinks()
 
