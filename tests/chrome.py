@@ -362,7 +362,7 @@ def chromeTests():
     time.sleep(3) 
 
     # Runs Tests for staff page
-    testTitleName("Florist Celeber")
+    testTitleName("Florist Celeber Kiruna")
     headerInfo()
     footerInfo()
 
@@ -384,7 +384,7 @@ def chromeTests():
     time.sleep(3) 
 
     # Runs Tests for staff page
-    testTitleName("Florist Celeber")
+    testTitleName("Florist Celeber Luleå")
     headerInfo()
     footerInfo()
 
