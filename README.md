@@ -120,9 +120,13 @@
 #### index.html
 - Main file that structures the website.
 
-### Staff Page
+### kiruna
 #### index.html
-- main file for subpage
+- Main file for subpage
+
+### lulea
+#### index.html
+- Main file for subpage
 
 ### Favicon
 - favicon.ico
