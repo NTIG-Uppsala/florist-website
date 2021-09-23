@@ -2,6 +2,31 @@ body{
     background-color: #212529;
 }
 
+#siteMap{
+    padding-left: 16px;
+    border-bottom: 1px solid #797777 !important;
+}
+
+#staff{
+    background-color: rgb(182, 175, 186) !important;
+}
+
+#products{
+    background-color: #b6afba !important;
+}
+
+#mainPage{
+    background-image: url("../assets/img/header-bg.jpg");
+}
+
+#kiruna{
+    background-image: url("../assets/img/header-bg-kiruna.jpg");
+}
+
+#lulea{
+    background-image: url("../assets/img/header-bg-lulea.jpg");
+}
+
 .infoList{
 
     list-style: none;
@@ -25,14 +50,15 @@ body{
 }
 
 
-
 .infoListContainer{
 
     align-items: center;
 
 }
 
-
+.storesContainer{
+    display: inline-block;
+}
 
 .icon-circle{
 
@@ -187,41 +213,13 @@ color: #FFC800;
 
 }
 
-
-.menuNoJs{
-
-    visibility: hidden;
-    
-}
-
-
-.noMenuJs{
-
-    background-color: #212529;
-    display: block;
-    max-height: 50px;
-    
-
-}
-
 a:link{
     text-decoration: none !important;
 }
 
-.noJsUl{
-    text-align: center !important;
-}
-
-.menuLi{
-    display: inline !important;
-    padding-right: 5px !important;
-}
 
 @media screen and (min-width: 990px){
-    #noJsMenu {
-        visibility: hidden;
-    }
-
+    
     #hoursOpenMenu{
         display: none;
     }
@@ -234,16 +232,13 @@ a:link{
         display: none;
     }
 
+    #staffMenu{
+        display: none;
+    }
+
     .itemMenu{
         margin-left: -1rem;
     }
-}
-
-.a-link:hover{
-    color: #cca000;
-}
-.a-link{
-    color: #FFF;
 }
 
 @media screen and (max-width: 375px) {
@@ -258,4 +253,45 @@ a:link{
 
 #subHeading{
     margin-top: 24px;
+}
+
+.rowTwo{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+}
+
+.rowTwo > div{
+    flex: 50%;
+    flex-shrink: 0;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
+
+.sitemapCenter{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.workTitle{
+    font-size: 25px !important;
+}
+
+@media screen and (max-width: 1400px) {
+    .sitemapCenter{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+.serviceContainer{
+    display: flex;
+    justify-content: center;
+}
+.maxService{
+    max-width: 400px !important;
 }

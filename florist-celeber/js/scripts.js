@@ -3,8 +3,6 @@
 //Removes the standard NO js html
 document.getElementById('mainNav').style.visibility = 'visible';
 document.getElementById('mainNav').classList.remove('noJs');
-document.getElementById('noJsMenu').classList.add('menuNoJs');
-
 
 //Landscape scrolle
 const mastheadContainer = document.getElementById('mastheadContainer');
@@ -19,17 +17,35 @@ if (mobileCheck()) {
 
 //Display for the user when it's open
 function liveOpeningHours(date) {
-    const openHours = [
+    const openHoursKiruna = [
         [0, 0], //Sun
         [10, 16], //Mon
         [10, 16], //Tue
         [10, 16], //Wed
         [10, 16], //Thu
-        [10, 16], //Friday
+        [10, 16], //Fri
         [12, 15], //Sat
-        [0,0]
+        [0,0] //Sun
     ]
-    document.getElementById('liveOpeningHours').innerHTML = getTimeMsg(openHours, date);
+    const openHoursLulea = [
+        [0, 0], //Sun
+        [10, 17], //Mon
+        [10, 16], //Tue
+        [10, 15], //Wed
+        [10, 16], //Tuu
+        [10, 16], //Fri
+        [12, 15], //Sat
+        [0, 0] //Sun
+    ]   
+    let url = window.location.href;
+    url = url.split('/');
+    const page = url[url.length - 2];
+    if (page == 'kiruna') {
+        document.getElementById('liveOpeningHours').innerHTML = getTimeMsg(openHoursKiruna, date);
+    } else if (page == 'lulea') {
+        document.getElementById('liveOpeningHours').innerHTML = getTimeMsg(openHoursLulea, date);
+    }
+    
 }
 
 //From time in timearray get msg
@@ -69,11 +85,9 @@ function getTimeMsg(businessDays, date) {
 // Checks if you are in the right timezone
 const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 // Checks if you are on the right subpage
-let url = window.location.href;
-url = url.split('/');
-const page = url[url.length - 2];
-if ((timeZone == 'Europe/Stockholm') && (page == 'florist-celeber')) {
-    liveOpeningHours(new Date());
+
+if (timeZone == 'Europe/Stockholm') {
+    liveOpeningHours(new Date())
 }
 
 
