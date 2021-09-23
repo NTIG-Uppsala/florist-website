@@ -399,4 +399,5 @@ def operaTests():
 
     socialMediaLinks()
 
+    print("OPERA TESTS COMPLETED!")
     driver.close()

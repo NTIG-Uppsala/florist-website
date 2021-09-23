@@ -72,7 +72,7 @@ def productsImages():
 
 #servives image and text
 def services():
-    checkForText("Services")
+    checkForText("Tjänster")
     checkForText("Konsultation 30 min")
     checkForText("250 kr")
     print("Services Test Completed")
@@ -401,4 +401,5 @@ def chromeTests():
 
     socialMediaLinks()
 
+    print("CHROME TESTS COMPLETED!")
     driver.close()

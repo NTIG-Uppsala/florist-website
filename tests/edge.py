@@ -397,4 +397,6 @@ def edgeTests():
 
     socialMediaLinks()
     
+    print("EDGE TESTS COMPLETED!")
+
     driver.close()

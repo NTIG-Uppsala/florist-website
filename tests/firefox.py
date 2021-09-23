@@ -397,4 +397,6 @@ def firefoxTests():
 
     socialMediaLinks()
 
+    print("FIREFOX TESTS COMPLETED!")
+
     driver.close()
