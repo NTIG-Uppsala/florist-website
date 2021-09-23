@@ -157,8 +157,23 @@
 - Live opening hours feature
 
 ### Tests
-#### tests.py
-- Runs all the tests and takes screenshots in different resolutions and saves them in a separate folder.
+#### main.py
+- Runs all the tests
+
+#### chrome.py
+-creates tests for Chrome webdriver
+
+#### firefox.py
+-creates tests for Firefox webdriver
+
+#### edge.py
+-creates tests for Edge webdriver
+
+#### opera.py
+-creates test for Opera webdriver
+
+#### screenshotTests.py
+-takes screenshots in different resolutions on all web browsers
 
 ### Webdrivers
 - chromedriver.exe
