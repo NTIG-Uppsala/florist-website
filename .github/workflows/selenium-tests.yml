@@ -37,5 +37,8 @@ jobs:
       - name: Install deps
         run: git clone https://github.com/seleniumbase/SeleniumBase.git && cd SeleniumBase && pip install . && sbase install chromedriver latest && sbase install geckodriver latest
 
-      - name: Run Tests
+      - name: Run Tests (Chromium)
         run: pytest .github/tests/chrome.py
+      
+      - name: Run Tests (Firefox)
+        run: pytest --firefox .github/tests/firefox.py
