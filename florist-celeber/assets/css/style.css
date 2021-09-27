@@ -16,15 +16,15 @@ body{
 }
 
 #mainPage{
-    background-image: url("../assets/img/header-bg.jpg");
+    background-image: url("../img/header-bg.jpg");
 }
 
 #kiruna{
-    background-image: url("../assets/img/header-bg-kiruna.jpg");
+    background-image: url("../img/header-bg-kiruna.jpg");
 }
 
 #lulea{
-    background-image: url("../assets/img/header-bg-lulea.jpg");
+    background-image: url("../img/header-bg-lulea.jpg");
 }
 
 .infoList{
