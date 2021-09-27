@@ -20,17 +20,17 @@ class chrome_test_mainpage(BaseCase):
         self.assert_title("Florist Celeber")
 
         #Find welcome message 
-        self.assert_text("Välkommen till", "div")
-        self.assert_text("FLORIST CELEBER", "div")
+        self.assert_text("Välkommen till")
+        self.assert_text("FLORIST CELEBER")
 
         #Find header Info
-        self.assert_text("BUTIKER", "li")
-        self.assert_text("HEM", "li")
-        self.assert_text("PRODUKTER", "li")
-        self.assert_text("TJÄNSTER", "li")
+        self.assert_text("BUTIKER")
+        self.assert_text("HEM")
+        self.assert_text("PRODUKTER")
+        self.assert_text("TJÄNSTER")
 
         #Find footer Info
-        self.assert_text("Copyright © Florist Celeber 2021", "div")
+        self.assert_text("Copyright © Florist Celeber 2021")
 
         #Find products
         self.assert_text("PRODUKTER")
@@ -57,9 +57,9 @@ class chrome_test_mainpage(BaseCase):
         self.assert_element('img[alt="Tulpaner 10-pack"]')
 
         #Find services image and text
-        self.assert_text("Tjänster", "h2")
-        self.assert_text("Konsultation 30 min", "div")
-        self.assert_text("250 kr", "div")
+        self.assert_text("Tjänster")
+        self.assert_text("Konsultation 30 min")
+        self.assert_text("250 kr")
 
         #Find social media links
         self.assert_element('a[href="https://www.facebook.com/ntiuppsala"]') #Find Facebook link
@@ -164,6 +164,7 @@ class chrome_test_kiruna(BaseCase):
 
 class chrome_test_lulea(BaseCase):
     def test(self):
+        self.open(luleaPage)
         self.assert_text("LULEÅ")
         self.assert_text("Måndagar")
         self.assert_text("Tisdagar")
