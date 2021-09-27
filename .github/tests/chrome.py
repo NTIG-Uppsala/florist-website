@@ -49,7 +49,7 @@ class chrome_test_mainpage(BaseCase):
         self.assert_text("100 kr")
 
         #Find products images
-        self.assert_attribute('img[alt="Sommarbuketter"]')
+        self.assert_element('img[alt="Sommarbuketter"]')
         self.assert_element('img[alt="Bröllopsbuketter"]')
         self.assert_element('img[alt="Begravningskrans"]')
         self.assert_element('img[alt="Höstbuketter"]')
@@ -94,7 +94,7 @@ class chrome_test_kiruna(BaseCase):
         self.assert_text("981 39")
         self.assert_text("Kiruna")
 
-        self.assert_text("0630-555-555")
+        self.assert_text("063 055 55 55")
         self.assert_text("info@itgwebb.se")
         self.assert_text("Fredrik Örtqvist")
         self.assert_text("Ägare")
@@ -182,7 +182,7 @@ class chrome_test_lulea(BaseCase):
         self.assert_text("Luleå")
         self.assert_text("Södra Sunderbyn")
 
-        self.assert_text("0640-555-333")
+        self.assert_text("064 055 53 33")
         self.assert_text("lulea@itgwebb.se")
 
         self.assert_text("Anna Andersson")
