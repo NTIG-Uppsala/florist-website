@@ -1,124 +1,104 @@
-from selenium import webdriver
+from seleniumbase import BaseCase
 import time
 
 from selenium.webdriver import chrome
 
-# a path to the site..
-website = "https://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber"
+#Path to the site..
+website = "https://ntig-uppsala.github.io/florist-website/florist-celeber/"
 
-# a path to subpage Kiruna
-kirunaPage = "https://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber/kiruna"
+#Path to subpage Kiruna
+kirunaPage = "https://ntig-uppsala.github.io/florist-website/florist-celeber/kiruna"
 
-# a path to subpage Luleå
-luleaPage = "https://www.itgwebb.se/klass/webb2/christoffer/dev/florist-celeber/lulea"
+#Path to subpage Luleå
+luleaPage = "https://ntig-uppsala.github.io/florist-website/florist-celeber/lulea"
 
 
 #----TESTS----
 
-#looks for text
-def checkForText(text):
-    assert text in driver.find_element_by_xpath("/html/body").text
+class Test_class_main(BaseCase):
+    def test(self):
+        self.open(website)
+        #Find website Title
+        self.assert_title("Florist Celeber")
 
-#Website Title
-def testTitleName(titlename):
-    assert titlename in driver.title
+        #Find welcome message 
+        self.assert_text("Välkommen till", "div")
+        self.assert_text("FLORIST CELEBER", "div")
+        print("checkForWelcomeMessage test completed")
 
-#Welcome message 
-def checkForWelcomeMessage():
-    checkForText("Välkommen till")
-    checkForText("FLORIST CELEBER")
-    print("checkForWelcomeMessage test completed")
+        #Find header Info
+        self.assert_text("BUTIKER", "li")
+        self.assert_text("HEM", "li")
+        self.assert_text("PRODUKTER", "li")
+        self.assert_text("TJÄNSTER", "li")
+        print("headerInfo test completed", "li")
 
-#Header Info
-def headerInfo():
-    checkForText("BUTIKER")
-    checkForText("HEM")
-    checkForText("PRODUKTER")
-    checkForText("TJÄNSTER")
-    print("headerInfo test completed")
+        #Find footer Info
+        self.assert_text("Copyright © Florist Celeber 2021", "div")
+        print("footerInfo test completed")
 
-#footer Info
-def footerInfo():
-    checkForText("Copyright © Florist Celeber 2021")
-    print("footerInfo test completed")
+        #Find products
+        self.assert_text("PRODUKTER")
+        self.assert_text("Sommarbuketter")
+        self.assert_text("Från")
+        self.assert_text("200 kr")
+        self.assert_text("Bröllopsbuketter")
+        self.assert_text("1200 kr")
+        self.assert_text("Begravningskrans")
+        self.assert_text("800 kr")
+        self.assert_text("Höstbuketter")
+        self.assert_text("400 kr")
+        self.assert_text("Rosor 10-pack")
+        self.assert_text("150 kr")
+        self.assert_text("Tulpaner 10-pack")
+        self.assert_text("100 kr")
+        print("productsInfo test completed")
 
-#producs test
-def productsInfo():
-    checkForText("PRODUKTER")
-    checkForText("Sommarbuketter")
-    checkForText("Från")
-    checkForText("200 kr")
-    checkForText("Bröllopsbuketter")
-    checkForText("1200 kr")
-    checkForText("Begravningskrans")
-    checkForText("800 kr")
-    checkForText("Höstbuketter")
-    checkForText("400 kr")
-    checkForText("Rosor 10-pack")
-    checkForText("150 kr")
-    checkForText("Tulpaner 10-pack")
-    checkForText("100 kr")
-    print("productsInfo test completed")
+        #Find products images
+        self.assert_attribute('img[alt="Sommarbuketter"]')
+        self.assert_element('img[alt="Bröllopsbuketter"]')
+        self.assert_element('img[alt="Begravningskrans"]')
+        self.assert_element('img[alt="Höstbuketter"]')
+        self.assert_element('img[alt="Rosor 10-pack"]')
+        self.assert_element('img[alt="Tulpaner 10-pack"]')
+        print("ProductsImages test completed")
 
-#producs images
-def productsImages():
-    driver.find_element_by_xpath("//img[@alt='Sommarbuketter']") #Locates The Alt @ in all Image @ If the alt Is correct the image shall be there. Proof can be seen In screenshot
-    driver.find_element_by_xpath("//img[@alt='Bröllopsbuketter']")
-    driver.find_element_by_xpath("//img[@alt='Begravningskrans']")
-    driver.find_element_by_xpath("//img[@alt='Höstbuketter']")
-    driver.find_element_by_xpath("//img[@alt='Rosor 10-pack']")
-    driver.find_element_by_xpath("//img[@alt='Tulpaner 10-pack']")
-    print("ProductsImages test completed")
+        #Find services image and text
+        self.assert_text("Tjänster", "h2")
+        self.assert_text("Konsultation 30 min", "div")
+        self.assert_text("250 kr", "div")
+        print("Services Test Completed")
 
-#servives image and text
-def services():
-    checkForText("Tjänster")
-    checkForText("Konsultation 30 min")
-    checkForText("250 kr")
-    print("Services Test Completed")
+        #Find social media links
+        self.assert_element('a[href="https://www.facebook.com/ntiuppsala"]') #Find Facebook link
+        self.click('a[href="https://www.facebook.com/ntiuppsala"]')    #Click link
+        self.back()    #Go back to main site
+        print("facebookLink Test Passed")
 
-#social media links 
-def socialMediaLinks():
-    facebookLink = driver.find_element_by_id("Facebook") #Locate id Facebook
-    driver.execute_script("window.scrollTo(0, 100000)") #Scroll to bottom of page
-    time.sleep(1)
-    facebookLink.click()    #click link
-    time.sleep(2)
-    driver.back()    #go back to main site
-    print("facebookLink Test Passed")
+        self.assert_element('a[href="https://twitter.com/ntiuppsala"]') #Find Twitter link
+        self.click('a[href="https://twitter.com/ntiuppsala"]')    #Click link
+        self.back()    #Go back to main site
+        print("twitterLink Test Passed")
 
-    time.sleep(1)
-    twitterLink = driver.find_element_by_id("Twitter") ##SAME AS ABOVE
-    driver.execute_script("window.scrollTo(0, 100000)")
-    time.sleep(1)
-    twitterLink.click()
-    time.sleep(2)
-    driver.back()
-    print("twitterLink Test Passed")
+        self.assert_element('a[href="https://instagram.com/ntiuppsala"]') #Find Instagram link
+        self.click('a[href="https://instagram.com/ntiuppsala"]')    #Click link
+        self.back()    #Go back to main site
+        print("instagramLink Test Passed")
 
-    time.sleep(1)
-    instagramLink = driver.find_element_by_id("Instagram")
-    driver.execute_script("window.scrollTo(0, 100000)")
-    time.sleep(1)
-    instagramLink.click()
-    time.sleep(2)
-    driver.back()
-    print("instagramLink Test Passed")
-
-    print("Social media links test Completed")
+        print("Social media links test Completed")
 
 
-#Store Buttons
-def storeButtons():
-    driver.find_element_by_xpath("//a[@href='kiruna/']")
-    driver.find_element_by_xpath("//a[@href='lulea/']")
-    print("storeButtons Test Completed")
-  
-  
+        #Store Buttons
+        self.click('a[href="kiruna/"]')
+        self.back()
+        self.click('a[href="lulea/"]')
+        self.back()
+        print("storeButtons Test Completed")
+
+
 
 #WelcomeToKiruna test
-def welcomeKiruna():
-    checkForText("KIRUNA")
+self.assert_text("KIRUNA")
 
 #Opening Hours Info Kiruna
 def checkForOpeningHoursKiruna():
