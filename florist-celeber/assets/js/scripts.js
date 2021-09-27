@@ -1,5 +1,7 @@
 // Scripts// 
 
+let testOverride = true;
+
 //Removes the standard NO js html
 document.getElementById('mainNav').style.visibility = 'visible';
 document.getElementById('mainNav').classList.remove('noJs');
@@ -85,6 +87,9 @@ function getTimeMsg(businessDays, date) {
 // Checks if you are in the right timezone
 const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 // Checks if you are on the right subpage
+if (testOverride == true){
+    liveOpeningHours(new Date())
+}
 
 if (timeZone == 'Europe/Stockholm') {
     liveOpeningHours(new Date())

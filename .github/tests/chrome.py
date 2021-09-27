@@ -57,7 +57,6 @@ class chrome_test_mainpage(BaseCase):
         self.assert_element('img[alt="Tulpaner 10-pack"]')
 
         #Find services image and text
-        self.assert_text("Tjänster", "h2")
         self.assert_text("Konsultation 30 min")
         self.assert_text("250 kr")
 
