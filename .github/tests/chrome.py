@@ -2,13 +2,13 @@ from seleniumbase import BaseCase
 import time
 
 #Path to the site..
-website = "file:/home/runner/work/florist-website/florist-website/index.html"
+website = "file:/home/runner/work/florist-website/florist-website/florist-celeber/index.html"
 
 #Path to subpage Kiruna
-kirunaPage = "file:/home/runner/work/florist-website/florist-website/kiruna/index.html"
+kirunaPage = "file:/home/runner/work/florist-website/florist-website/florist-celeber/kiruna/index.html"
 
 #Path to subpage Luleå
-luleaPage = "file:/home/runner/work/florist-website/florist-website/lulea/index.html"
+luleaPage = "file:/home/runner/work/florist-website/florist-website/florist-celeber/lulea/index.html"
 
 
 #----TESTS----
