@@ -107,28 +107,28 @@ class chrome_test_kiruna(BaseCase):
         self.find_element("//img[@alt='Örjan Johansson']")
         
         dates = [
-            ["new Date('13 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl. 10"], #monday more than 30 minutes before opening
-            ["new Date('13 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #monday less than 30 minutes before opening
-            ["new Date('13 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #monday just after opening
-            ["new Date('13 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #monday less than 1 hour before closing
-            ["new Date('13 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl. 10"], #monday just after closing
+            ["new Date('13 Sep 2021 9:25:00 GMT')", "Öppnar idag kl. 10"], #monday more than 30 minutes before opening
+            ["new Date('13 Sep 2021 9:55:00 GMT')", "Öppnar snart"], #monday less than 30 minutes before opening
+            ["new Date('13 Sep 2021 10:05:00 GMT')", "Öppet just nu"], #monday just after opening
+            ["new Date('13 Sep 2021 15:05:00 GMT')", "Stänger snart"], #monday less than 1 hour before closing
+            ["new Date('13 Sep 2021 16:05:00 GMT')", "Öppnar imorgon kl. 10"], #monday just after closing
 
-            ["new Date('14 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl. 10"], #tuesday more than 30 minutes before opening
-            ["new Date('14 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #tuesday less than 30 minutes before opening
-            ["new Date('14 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #tuesday just after opening
-            ["new Date('14 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #tuesday less than 1 hour before closing
-            ["new Date('14 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl. 10"], #tuesday after closing
+            ["new Date('14 Sep 2021 9:25:00 GMT')", "Öppnar idag kl. 10"], #tuesday more than 30 minutes before opening
+            ["new Date('14 Sep 2021 9:55:00 GMT')", "Öppnar snart"], #tuesday less than 30 minutes before opening
+            ["new Date('14 Sep 2021 10:05:00 GMT')", "Öppet just nu"], #tuesday just after opening
+            ["new Date('14 Sep 2021 15:05:00 GMT')", "Stänger snart"], #tuesday less than 1 hour before closing
+            ["new Date('14 Sep 2021 16:05:00 GMT')", "Öppnar imorgon kl. 10"], #tuesday after closing
 
-            ["new Date('15 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl. 10"], #wednesday more than 30 minutes before opening
-            ["new Date('15 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #wednesday less than 30 minutes before opening
-            ["new Date('15 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #wednesday just after opening
-            ["new Date('15 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #wednesday less than 1 hour before closing
-            ["new Date('15 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl. 10"], #wednesday after closing
+            ["new Date('15 Sep 2021 9:25:00 GMT')", "Öppnar idag kl. 10"], #wednesday more than 30 minutes before opening
+            ["new Date('15 Sep 2021 9:55:00 GMT')", "Öppnar snart"], #wednesday less than 30 minutes before opening
+            ["new Date('15 Sep 2021 10:05:00 GMT')", "Öppet just nu"], #wednesday just after opening
+            ["new Date('15 Sep 2021 15:05:00 GMT')", "Stänger snart"], #wednesday less than 1 hour before closing
+            ["new Date('15 Sep 2021 16:05:00 GMT')", "Öppnar imorgon kl. 10"], #wednesday after closing
 
-            ["new Date('16 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl. 10"], #thursday more than 30 minutes before opening
-            ["new Date('16 Sep 2021 9:55:00 GMT+2')", "Öppnar snart"], #thursday less than 30 minutes before opening
-            ["new Date('16 Sep 2021 10:05:00 GMT+2')", "Öppet just nu"], #thursday just after opening
-            ["new Date('16 Sep 2021 15:05:00 GMT+2')", "Stänger snart"], #thursday less than 1 hour before closing
+            ["new Date('16 Sep 2021 9:25:00 GMT')", "Öppnar idag kl. 10"], #thursday more than 30 minutes before opening
+            ["new Date('16 Sep 2021 9:55:00 GMT')", "Öppnar snart"], #thursday less than 30 minutes before opening
+            ["new Date('16 Sep 2021 10:05:00 GMT')", "Öppet just nu"], #thursday just after opening
+            ["new Date('16 Sep 2021 15:05:00 GMT')", "Stänger snart"], #thursday less than 1 hour before closing
             ["new Date('16 Sep 2021 16:05:00 GMT+2')", "Öppnar imorgon kl. 10"], #thursday after closing
 
             ["new Date('17 Sep 2021 9:25:00 GMT+2')", "Öppnar idag kl. 10"], #friday more than 30 minutes before opening
