@@ -160,6 +160,7 @@ class chrome_test_kiruna(BaseCase):
             codeToExecute = "liveOpeningHours("+ i[0] +")"
             self.execute_script(codeToExecute)
             self.assert_text(i[1])
+            print("index" + i)
 
 class chrome_test_lulea(BaseCase):
     def test(self):
@@ -252,3 +253,4 @@ class chrome_test_lulea(BaseCase):
             codeToExecute = "liveOpeningHours("+ i[0] +")"
             self.execute_script(codeToExecute)
             self.assert_text(i[1])
+            print("index" + i)
