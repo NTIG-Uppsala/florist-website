@@ -57,7 +57,7 @@ class chrome_test_mainpage(BaseCase):
         self.assert_element('img[alt="Tulpaner 10-pack"]')
 
         #Find services image and text
-        self.assert_text("Tjänster")
+        self.assert_text("Tjänster", "h2")
         self.assert_text("Konsultation 30 min")
         self.assert_text("250 kr")
 
@@ -95,7 +95,7 @@ class chrome_test_kiruna(BaseCase):
         self.assert_text("Kiruna")
 
         self.assert_text("063-055 55 55")
-        self.assert_text("info@itgwebb.se")
+        self.assert_text("info@ntig-uppsala.github.io")
         self.assert_text("Fredrik Örtqvist")
         self.assert_text("Ägare")
         self.assert_text("Örjan Johansson")
@@ -183,7 +183,7 @@ class chrome_test_lulea(BaseCase):
         self.assert_text("Södra Sunderbyn")
 
         self.assert_text("064-055 53 33")
-        self.assert_text("lulea@itgwebb.se")
+        self.assert_text("info@ntig-uppsala.github.io")
 
         self.assert_text("Anna Andersson")
         self.assert_text("Florist")
