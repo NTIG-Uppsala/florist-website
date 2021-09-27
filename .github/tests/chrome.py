@@ -156,11 +156,11 @@ class chrome_test_kiruna(BaseCase):
             ["new Date('18 Sep 2021 00:00:00 GMT+2')", "Öppnar idag kl. 12"], # saturday midnight
             ["new Date('19 Sep 2021 00:00:00 GMT+2')", "Öppnar imorgon kl. 10"] # sunday midnight
             ]
-        for i in dates:
-            codeToExecute = "liveOpeningHours("+ i[0] +")"
+        for i in range(len(dates)):
+            codeToExecute = "liveOpeningHours("+ dates[i][0] +")"
             self.execute_script(codeToExecute)
-            self.assert_text(i[1])
-            print("index" + i)
+            self.assert_text(dates[i][1])
+            print("index: " + i)
 
 class chrome_test_lulea(BaseCase):
     def test(self):
@@ -249,8 +249,8 @@ class chrome_test_lulea(BaseCase):
                 ["new Date('19 Sep 2021 00:00:00 GMT+2')", "Öppnar imorgon kl. 10"] # sunday midnight
 
             ]
-        for i in dates:
-            codeToExecute = "liveOpeningHours("+ i[0] +")"
+        for i in range(len(dates)):
+            codeToExecute = "liveOpeningHours("+ dates[i][0] +")"
             self.execute_script(codeToExecute)
-            self.assert_text(i[1])
-            print("index" + i)
+            self.assert_text(dates[i][1])
+            print("index: " + i)
