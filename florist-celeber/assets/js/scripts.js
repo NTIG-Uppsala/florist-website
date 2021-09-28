@@ -22,7 +22,7 @@ function liveOpeningHours(date) {
     const openHoursKiruna = [
         [0, 0], //Sun
         [10, 16], //Mon
-        [10, 16], //Tue
+        [11, 16], //Tue
         [10, 16], //Wed
         [10, 16], //Thu
         [10, 16], //Fri
