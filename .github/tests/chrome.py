@@ -84,10 +84,6 @@ class chrome_test_kiruna(BaseCase):
     def test(self):
         self.open(kirunaPage)
         self.assert_text("KIRUNA")
-        self.assert_text("Måndag - Fredag")
-        self.assert_text("Lördag")
-        self.assert_text("10-16")
-        self.assert_text("12-15")
 
         self.assert_text("Fjällgatan 32H")
         self.assert_text("981 39")
