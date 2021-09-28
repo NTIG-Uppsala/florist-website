@@ -14,40 +14,42 @@ function mobileCheck() {
     return check;
 };
 if (mobileCheck()) {
+    //Kan behöva tabort detta pga förstör testbilder på telefoner
     mastheadContainer.scrollIntoView();
 }
 
 //Display for the user when it's open
 function liveOpeningHours(date) {
-    const openHoursKiruna = [
-        [0, 0], //Sun
-        [10, 16], //Mon
-        [10, 16], //Tue
-        [10, 16], //Wed
-        [10, 16], //Thu
-        [10, 16], //Fri
-        [12, 15], //Sat
-        [0,0] //Sun
-    ]
-    const openHoursLulea = [
-        [0, 0], //Sun
-        [10, 17], //Mon
-        [10, 16], //Tue
-        [10, 15], //Wed
-        [10, 16], //Tuu
-        [10, 16], //Fri
-        [12, 15], //Sat
-        [0, 0] //Sun
-    ]   
     let url = window.location.href;
     url = url.split('/');
     const page = url[url.length - 2];
     if (page == 'kiruna') {
         document.getElementById('liveOpeningHours').innerHTML = getTimeMsg(openHoursKiruna, date);
+        setTimesStatic('kiruna');
     } else if (page == 'lulea') {
         document.getElementById('liveOpeningHours').innerHTML = getTimeMsg(openHoursLulea, date);
+        setTimesStatic('lulea');
     }
     
+}
+
+function setTimesStatic(location){
+     if(location == 'kiruna'){
+         document.getElementById('mandagTidKiruna').innerHTML = openHoursKiruna[1][0] + "-" + openHoursKiruna[1][1];
+         document.getElementById('tisdagTidKiruna').innerHTML = openHoursKiruna[2][0] + "-" + openHoursKiruna[2][1];
+         document.getElementById('onsdagTidKiruna').innerHTML = openHoursKiruna[3][0] + "-" + openHoursKiruna[3][1];
+         document.getElementById('torsdagTidKiruna').innerHTML = openHoursKiruna[4][0] + "-" + openHoursKiruna[4][1];
+         document.getElementById('fredagTidKiruna').innerHTML = openHoursKiruna[5][0] + "-" + openHoursKiruna[5][1];
+         document.getElementById('lordagTidKiruna').innerHTML = openHoursKiruna[6][0] + "-" + openHoursKiruna[6][1];
+    }
+    else if(location == 'lulea'){
+        document.getElementById('mandagTidLulea').innerHTML = openHoursLulea[1][0] + "-" + openHoursLulea[1][1];
+        document.getElementById('tisdagTidLulea').innerHTML = openHoursLulea[2][0] + "-" + openHoursLulea[2][1];
+        document.getElementById('onsdagTidLulea').innerHTML = openHoursLulea[3][0] + "-" + openHoursLulea[3][1];
+        document.getElementById('torsdagTidLulea').innerHTML = openHoursLulea[4][0] + "-" + openHoursLulea[4][1];
+        document.getElementById('fredagTidLulea').innerHTML = openHoursLulea[5][0] + "-" + openHoursLulea[5][1];
+        document.getElementById('lordagTidLulea').innerHTML = openHoursLulea[6][0] + "-" + openHoursLulea[6][1];
+    }
 }
 
 //From time in timearray get msg
@@ -89,10 +91,17 @@ const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 // Checks if you are on the right subpage
 if (testOverride == true){
     liveOpeningHours(new Date())
-}
-
-if (timeZone == 'Europe/Stockholm') {
+} else if (timeZone == 'Europe/Stockholm') {
     liveOpeningHours(new Date())
+} else {
+    let url = window.location.href;
+    url = url.split('/');
+    const page = url[url.length - 2];
+    if (page == 'kiruna') {
+        setTimesStatic('kiruna');
+    } else if (page == 'lulea') {
+        setTimesStatic('lulea');
+    }
 }
 
 
