@@ -1,6 +1,8 @@
 // Scripts// 
-
-let testOverride = true;
+let openHoursKiruna = [];
+let openHoursLulea = [];
+let testOverride = false;
+let isReady = false;
 
 //Removes the standard NO js html
 document.getElementById('mainNav').style.visibility = 'visible';
@@ -25,10 +27,10 @@ function liveOpeningHours(date) {
     const page = url[url.length - 2];
     if (page == 'kiruna') {
         //let openHoursKiruna = requestJsonKiruna();
-        requestJsonKiruna(date);
+        document.getElementById('liveOpeningHours').innerHTML = getTimeMsg(openHoursKiruna, date);
         
     } else if (page == 'lulea') {
-        requestJsonLulea(date);
+        document.getElementById('liveOpeningHours').innerHTML = getTimeMsg(openHoursLulea, date);
     }
     
 }
@@ -86,25 +88,6 @@ function getTimeMsg(businessDays, date) {
     }
     return openMsg.open;
 }
-// Checks if you are in the right timezone
-const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-// Checks if you are on the right subpage
-if (testOverride == true){
-    liveOpeningHours(new Date())
-} else if (timeZone == 'Europe/Stockholm') {
-    liveOpeningHours(new Date())
-} else {
-    let url = window.location.href;
-    url = url.split('/');
-    const page = url[url.length - 2];
-    if (page == 'kiruna') {
-        requestJsonKiruna();
-    } else if (page == 'lulea') {
-        requestJsonLulea()
-    }
-}
-
-
 
 //Changes menu on scroll
 window.addEventListener('DOMContentLoaded', event => {
@@ -160,7 +143,8 @@ function requestJsonKiruna(date) {
             type: 'GET',
             url: `https://sheets.googleapis.com/v4/spreadsheets/1UPl5omRAHA6uMnlC--p_tKvYLEYgyrpn7ZJjtdvupoI/values/B11:C17?key=AIzaSyAEcN2gPi9-UMllfIveKJydPZTrmKjJFKY`,
             success: function (response) {
-                document.getElementById('liveOpeningHours').innerHTML = getTimeMsg(FormatKirunaResponse(response), date);
+                FormatKirunaResponse(response);
+                isReady = true;
             } 
         });
         //const response = fetch(`https://sheets.googleapis.com/v4/spreadsheets/1UPl5omRAHA6uMnlC--p_tKvYLEYgyrpn7ZJjtdvupoI/values/B11:C17?key=AIzaSyAEcN2gPi9-UMllfIveKJydPZTrmKjJFKY`);
@@ -171,7 +155,6 @@ function requestJsonKiruna(date) {
 }
 
 function FormatKirunaResponse(data){
-    let openHoursKiruna = [];
     try {
         openHoursKiruna = [
             [parseInt(data.values[6][0]), parseInt(data.values[6][1])],
@@ -187,7 +170,6 @@ function FormatKirunaResponse(data){
     } catch (e) {
         console.error("Error formatting. Make sure no letters or signs are entered.");
     }
-    return openHoursKiruna;
 }
 
 function requestJsonLulea(date) {
@@ -196,7 +178,8 @@ function requestJsonLulea(date) {
             type: 'GET',
             url: `https://sheets.googleapis.com/v4/spreadsheets/1UPl5omRAHA6uMnlC--p_tKvYLEYgyrpn7ZJjtdvupoI/values/B21:C27?key=AIzaSyAEcN2gPi9-UMllfIveKJydPZTrmKjJFKY`,
             success: function (response) {
-                document.getElementById('liveOpeningHours').innerHTML = getTimeMsg(FormatLuleaResponse(response), date);
+                FormatLuleaResponse(response);
+                isReady = true;
             }
         });  
     } catch (e) {
@@ -205,7 +188,6 @@ function requestJsonLulea(date) {
 }
 
 function FormatLuleaResponse(data){
-    let openHoursLulea = [];
     try {
         openHoursLulea = [
             [parseInt(data.values[6][0]), parseInt(data.values[6][1])],
@@ -221,5 +203,35 @@ function FormatLuleaResponse(data){
     } catch (e) {
         console.error("Error formatting. Make sure no letters or signs are entered.");
     }
-    return openHoursLulea;
 }
+
+function checkIfRequestIsDone() {
+    let i = 0;
+    if(isReady === false) {
+       window.setTimeout(checkIfRequestIsDone, 100); /* this checks the flag every 100 milliseconds*/
+    }
+    else if (i > 100){
+        console.error("Error: Information not recived after 10 seconds!");
+    }
+    else {
+        // Checks if you are in the right timezone
+        const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        // Checks if you are on the right subpage
+        if (testOverride == true){
+            liveOpeningHours(new Date())
+        } else if (timeZone == 'Europe/Stockholm') {
+            liveOpeningHours(new Date())
+        }
+    }
+}
+
+let url = window.location.href;
+url = url.split('/');
+const page = url[url.length - 2];
+if (page == 'kiruna') {
+    requestJsonKiruna();
+} else if (page == 'lulea') {
+    requestJsonLulea()
+}
+
+checkIfRequestIsDone()
