@@ -143,12 +143,10 @@ function requestJsonKiruna(date) {
             type: 'GET',
             url: `https://sheets.googleapis.com/v4/spreadsheets/1UPl5omRAHA6uMnlC--p_tKvYLEYgyrpn7ZJjtdvupoI/values/B11:C17?key=AIzaSyAEcN2gPi9-UMllfIveKJydPZTrmKjJFKY`,
             success: function (response) {
-                FormatKirunaResponse(response);
+                FormatKirunaResponse(response.values);
                 isReady = true;
             } 
         });
-        //const response = fetch(`https://sheets.googleapis.com/v4/spreadsheets/1UPl5omRAHA6uMnlC--p_tKvYLEYgyrpn7ZJjtdvupoI/values/B11:C17?key=AIzaSyAEcN2gPi9-UMllfIveKJydPZTrmKjJFKY`);
-        //data = response.json();
     } catch (e) {
         console.error("Error: " + e);
     }
@@ -157,14 +155,14 @@ function requestJsonKiruna(date) {
 function FormatKirunaResponse(data){
     try {
         openHoursKiruna = [
-            [parseInt(data.values[6][0]), parseInt(data.values[6][1])],
-            [parseInt(data.values[0][0]), parseInt(data.values[0][1])],
-            [parseInt(data.values[1][0]), parseInt(data.values[1][1])],
-            [parseInt(data.values[2][0]), parseInt(data.values[2][1])],
-            [parseInt(data.values[3][0]), parseInt(data.values[3][1])],
-            [parseInt(data.values[4][0]), parseInt(data.values[4][1])],
-            [parseInt(data.values[5][0]), parseInt(data.values[5][1])],
-            [parseInt(data.values[6][0]), parseInt(data.values[6][1])]
+            [parseInt(data[6][0]), parseInt(data[6][1])],
+            [parseInt(data[0][0]), parseInt(data[0][1])],
+            [parseInt(data[1][0]), parseInt(data[1][1])],
+            [parseInt(data[2][0]), parseInt(data[2][1])],
+            [parseInt(data[3][0]), parseInt(data[3][1])],
+            [parseInt(data[4][0]), parseInt(data[4][1])],
+            [parseInt(data[5][0]), parseInt(data[5][1])],
+            [parseInt(data[6][0]), parseInt(data[6][1])]
         ]
         setTimesStatic('kiruna', openHoursKiruna);
     } catch (e) {
@@ -178,7 +176,7 @@ function requestJsonLulea(date) {
             type: 'GET',
             url: `https://sheets.googleapis.com/v4/spreadsheets/1UPl5omRAHA6uMnlC--p_tKvYLEYgyrpn7ZJjtdvupoI/values/B21:C27?key=AIzaSyAEcN2gPi9-UMllfIveKJydPZTrmKjJFKY`,
             success: function (response) {
-                FormatLuleaResponse(response);
+                FormatLuleaResponse(response.values);
                 isReady = true;
             }
         });  
@@ -190,14 +188,14 @@ function requestJsonLulea(date) {
 function FormatLuleaResponse(data){
     try {
         openHoursLulea = [
-            [parseInt(data.values[6][0]), parseInt(data.values[6][1])],
-            [parseInt(data.values[0][0]), parseInt(data.values[0][1])],
-            [parseInt(data.values[1][0]), parseInt(data.values[1][1])],
-            [parseInt(data.values[2][0]), parseInt(data.values[2][1])],
-            [parseInt(data.values[3][0]), parseInt(data.values[3][1])],
-            [parseInt(data.values[4][0]), parseInt(data.values[4][1])],
-            [parseInt(data.values[5][0]), parseInt(data.values[5][1])],
-            [parseInt(data.values[6][0]), parseInt(data.values[6][1])]
+            [parseInt(data[6][0]), parseInt(data[6][1])],
+            [parseInt(data[0][0]), parseInt(data[0][1])],
+            [parseInt(data[1][0]), parseInt(data[1][1])],
+            [parseInt(data[2][0]), parseInt(data[2][1])],
+            [parseInt(data[3][0]), parseInt(data[3][1])],
+            [parseInt(data[4][0]), parseInt(data[4][1])],
+            [parseInt(data[5][0]), parseInt(data[5][1])],
+            [parseInt(data[6][0]), parseInt(data[6][1])]
         ]
         setTimesStatic('lulea', openHoursLulea);
     } catch (e) {
@@ -205,8 +203,9 @@ function FormatLuleaResponse(data){
     }
 }
 
+
+let i = 0;
 function checkIfRequestIsDone() {
-    let i = 0;
     if (i > 100){
         console.error("Error: Information not recived after 10 seconds!");
     }
@@ -226,6 +225,7 @@ function checkIfRequestIsDone() {
     }
 }
 
+
 let url = window.location.href;
 url = url.split('/');
 const page = url[url.length - 2];
@@ -234,5 +234,6 @@ if (page == 'kiruna') {
 } else if (page == 'lulea') {
     requestJsonLulea()
 }
+
 
 checkIfRequestIsDone()
