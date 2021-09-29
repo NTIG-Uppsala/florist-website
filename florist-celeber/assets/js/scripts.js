@@ -207,11 +207,12 @@ function FormatLuleaResponse(data){
 
 function checkIfRequestIsDone() {
     let i = 0;
-    if(isReady === false) {
-       window.setTimeout(checkIfRequestIsDone, 100); /* this checks the flag every 100 milliseconds*/
-    }
-    else if (i > 100){
+    if (i > 100){
         console.error("Error: Information not recived after 10 seconds!");
+    }
+    else if(isReady === false) {
+        i++;
+        window.setTimeout(checkIfRequestIsDone, 100); /* this checks the flag every 100 milliseconds*/
     }
     else {
         // Checks if you are in the right timezone
