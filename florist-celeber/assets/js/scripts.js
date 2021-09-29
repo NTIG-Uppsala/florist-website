@@ -1,6 +1,6 @@
 // Scripts// 
 
-let testOverride = false;
+let testOverride = true;
 
 //Removes the standard NO js html
 document.getElementById('mainNav').style.visibility = 'visible';
@@ -24,31 +24,31 @@ function liveOpeningHours(date) {
     url = url.split('/');
     const page = url[url.length - 2];
     if (page == 'kiruna') {
-        document.getElementById('liveOpeningHours').innerHTML = getTimeMsg(openHoursKiruna, date);
-        requestJsonKirunaAndFormat();
+        //let openHoursKiruna = requestJsonKiruna();
+        requestJsonKiruna(date);
+        
     } else if (page == 'lulea') {
-        document.getElementById('liveOpeningHours').innerHTML = getTimeMsg(openHoursLulea, date);
-        requestJsonLuleaAndFormat()
+        requestJsonLulea(date);
     }
     
 }
 
-function setTimesStatic(location){
+function setTimesStatic(location, openHours){
      if(location == 'kiruna'){
-         document.getElementById('mandagTidKiruna').innerHTML = openHoursKiruna[1][0] + "-" + openHoursKiruna[1][1];
-         document.getElementById('tisdagTidKiruna').innerHTML = openHoursKiruna[2][0] + "-" + openHoursKiruna[2][1];
-         document.getElementById('onsdagTidKiruna').innerHTML = openHoursKiruna[3][0] + "-" + openHoursKiruna[3][1];
-         document.getElementById('torsdagTidKiruna').innerHTML = openHoursKiruna[4][0] + "-" + openHoursKiruna[4][1];
-         document.getElementById('fredagTidKiruna').innerHTML = openHoursKiruna[5][0] + "-" + openHoursKiruna[5][1];
-         document.getElementById('lordagTidKiruna').innerHTML = openHoursKiruna[6][0] + "-" + openHoursKiruna[6][1];
+         document.getElementById('mandagTidKiruna').innerHTML = openHours[1][0] + "-" + openHours[1][1];
+         document.getElementById('tisdagTidKiruna').innerHTML = openHours[2][0] + "-" + openHours[2][1];
+         document.getElementById('onsdagTidKiruna').innerHTML = openHours[3][0] + "-" + openHours[3][1];
+         document.getElementById('torsdagTidKiruna').innerHTML = openHours[4][0] + "-" + openHours[4][1];
+         document.getElementById('fredagTidKiruna').innerHTML = openHours[5][0] + "-" + openHours[5][1];
+         document.getElementById('lordagTidKiruna').innerHTML = openHours[6][0] + "-" + openHours[6][1];
     }
     else if(location == 'lulea'){
-        document.getElementById('mandagTidLulea').innerHTML = openHoursLulea[1][0] + "-" + openHoursLulea[1][1];
-        document.getElementById('tisdagTidLulea').innerHTML = openHoursLulea[2][0] + "-" + openHoursLulea[2][1];
-        document.getElementById('onsdagTidLulea').innerHTML = openHoursLulea[3][0] + "-" + openHoursLulea[3][1];
-        document.getElementById('torsdagTidLulea').innerHTML = openHoursLulea[4][0] + "-" + openHoursLulea[4][1];
-        document.getElementById('fredagTidLulea').innerHTML = openHoursLulea[5][0] + "-" + openHoursLulea[5][1];
-        document.getElementById('lordagTidLulea').innerHTML = openHoursLulea[6][0] + "-" + openHoursLulea[6][1];
+        document.getElementById('mandagTidLulea').innerHTML = openHours[1][0] + "-" + openHours[1][1];
+        document.getElementById('tisdagTidLulea').innerHTML = openHours[2][0] + "-" + openHours[2][1];
+        document.getElementById('onsdagTidLulea').innerHTML = openHours[3][0] + "-" + openHours[3][1];
+        document.getElementById('torsdagTidLulea').innerHTML = openHours[4][0] + "-" + openHours[4][1];
+        document.getElementById('fredagTidLulea').innerHTML = openHours[5][0] + "-" + openHours[5][1];
+        document.getElementById('lordagTidLulea').innerHTML = openHours[6][0] + "-" + openHours[6][1];
     }
 }
 
@@ -98,9 +98,9 @@ if (testOverride == true){
     url = url.split('/');
     const page = url[url.length - 2];
     if (page == 'kiruna') {
-        requestJsonKirunaAndFormat();
+        requestJsonKiruna();
     } else if (page == 'lulea') {
-        requestJsonLuleaAndFormat()
+        requestJsonLulea()
     }
 }
 
