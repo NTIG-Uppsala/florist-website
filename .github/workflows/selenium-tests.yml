@@ -35,7 +35,7 @@ jobs:
           architecture: x64
           
       - name: Install deps
-        run: git clone https://github.com/seleniumbase/SeleniumBase.git && cd SeleniumBase && pip install . && sbase install chromedriver && sbase install geckodriver
+        run: git clone https://github.com/seleniumbase/SeleniumBase.git && cd SeleniumBase && pip install . && sbase install chromedriver latest && sbase install geckodriver
 
       - name: Run Tests (Chromium)
         run: pytest .github/tests/chrome.py
