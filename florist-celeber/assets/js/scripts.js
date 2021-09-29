@@ -25,10 +25,10 @@ function liveOpeningHours(date) {
     const page = url[url.length - 2];
     if (page == 'kiruna') {
         document.getElementById('liveOpeningHours').innerHTML = getTimeMsg(openHoursKiruna, date);
-        setTimesStatic('kiruna');
+        requestJsonKirunaAndFormat();
     } else if (page == 'lulea') {
         document.getElementById('liveOpeningHours').innerHTML = getTimeMsg(openHoursLulea, date);
-        setTimesStatic('lulea');
+        requestJsonLuleaAndFormat()
     }
     
 }
@@ -98,9 +98,9 @@ if (testOverride == true){
     url = url.split('/');
     const page = url[url.length - 2];
     if (page == 'kiruna') {
-        setTimesStatic('kiruna');
+        requestJsonKirunaAndFormat();
     } else if (page == 'lulea') {
-        setTimesStatic('lulea');
+        requestJsonLuleaAndFormat()
     }
 }
 
