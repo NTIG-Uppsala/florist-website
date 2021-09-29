@@ -85,11 +85,13 @@ class chrome_test_kiruna(BaseCase):
     def test(self):
         self.open(kirunaPage)
         self.assert_text("KIRUNA")
-        self.assert_text("Måndag - Fredag")
+        self.assert_text("Måndagar")
+        self.assert_text("Tisdagar")
+        self.assert_text("Onsdagar")
+        self.assert_text("Torsdagar")
+        self.assert_text("Fredagar")
         self.assert_text("Lördag")
-        self.assert_text("10-16")
-        self.assert_text("12-15")
-
+        
         self.assert_text("Fjällgatan 32H")
         self.assert_text("981 39")
         self.assert_text("Kiruna")
@@ -173,10 +175,6 @@ class chrome_test_lulea(BaseCase):
         self.assert_text("Torsdagar")
         self.assert_text("Fredagar")
         self.assert_text("Lördag")
-        self.assert_text("10-17")
-        self.assert_text("10-16")
-        self.assert_text("10-15")
-        self.assert_text("12-15") 
 
         self.assert_text("Färjledsvägen 38")
         self.assert_text("961 93")

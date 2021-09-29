@@ -1,6 +1,8 @@
 # florist-website
 ## [Website](http://www.itgwebb.se/klass/webb2/christoffer/florist-celeber/)
 
+# [KLICKA HÄR FÖR ATT ÄNDRA ÖPPETTIDER](https://github.com/NTIG-Uppsala/florist-website/blob/master/florist-celeber/assets/js/openingTimes.js)
+
 # Documentation
 
 ## florist-celeber

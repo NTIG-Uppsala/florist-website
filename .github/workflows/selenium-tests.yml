@@ -34,8 +34,11 @@ jobs:
           # The target architecture (x86, x64) of the Python interpreter.
           architecture: x64
           
+      - name: install lastes google chrome and set up ppa
+        run: sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' && sudo apt update && sudo apt install google-chrome-stable
+          
       - name: Install deps
-        run: git clone https://github.com/seleniumbase/SeleniumBase.git && cd SeleniumBase && pip install . && sbase install chromedriver latest && sbase install geckodriver latest
+        run: git clone https://github.com/seleniumbase/SeleniumBase.git && cd SeleniumBase && pip install . && sbase install geckodriver
 
       - name: Run Tests (Chromium)
         run: pytest .github/tests/chrome.py
