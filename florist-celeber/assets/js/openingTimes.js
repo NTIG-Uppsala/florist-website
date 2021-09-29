@@ -1,6 +1,8 @@
 
 // Denna sektionen är för Kiruna!
 // Allt som ska ändras här är nummer. Symbolerna måste vara på samma ställe då dessa separerar de olika nummerna.
+// För att påbörja ändring klicka på pennan uppe i högra hörnet av detta fönster.
+// När du är klar med ändringarna tryck på den gröna knappen längst ner där det står Commit changes.
 
 
 const openHoursKiruna = [ // Rör ej denna rad!
