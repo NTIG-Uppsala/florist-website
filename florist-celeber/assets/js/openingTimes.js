@@ -39,11 +39,6 @@ const openHoursKiruna = [ // Rör ej denna rad!
 
 
 
-
-
-
-
-
 // Denna sektion är för Luleå
 // Allt som ska ändras här är nummer. Symbolerna måste vara på samma ställe då dessa separerar de olika nummerna.
 
