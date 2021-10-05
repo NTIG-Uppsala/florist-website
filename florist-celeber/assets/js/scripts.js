@@ -301,6 +301,9 @@ function SortClosedDays(dataArr, today) {
         if (a[2] > b[2] && a[1] == b[1]){
             return 1;
         }
+        if (a[2] < b[2] && a[1] == b[1]){
+            return -1;
+        }
         return 0;
     });
     futureDates.sort((a, b) => {
@@ -318,6 +321,9 @@ function SortClosedDays(dataArr, today) {
         }
         if (a[2] > b[2] && a[1] == b[1]){
             return 1;
+        }
+        if (a[2] < b[2] && a[1] == b[1]){
+            return -1;
         }
         return 0;
     });
