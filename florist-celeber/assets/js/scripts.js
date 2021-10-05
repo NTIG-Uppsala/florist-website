@@ -265,11 +265,11 @@ function FormatResponseClosedDays(data){
 
 function SortClosedDays(dataArr, today) {
 
-    var currentMonth = parseInt(today.getMonth() + 1); //get month returns a value between 0 and 11. setting +1 gets the real month number.
-      var currentDay = parseInt(today.getDate());
+    let currentMonth = parseInt(today.getMonth() + 1); //get month returns a value between 0 and 11. setting +1 gets the real month number.
+    let currentDay = parseInt(today.getDate());
 
-      let futureDates = [];
-      let pastDates = [];
+    let futureDates = [];
+    let pastDates = [];
       for(let i = 0; i < dataArr.length; i++) {
             if(dataArr[i][1] <= currentMonth){
                 if(dataArr[i][2] >= currentDay && dataArr[i][1] == currentMonth){
@@ -284,10 +284,49 @@ function SortClosedDays(dataArr, today) {
             }
       }
     let dateArr = [];
+    console.log(pastDates);
+    pastDates.sort((a, b) => {
+        if (a[1] > b[1] && a[2] > b[2]){
+            return 1;
+        }
+        if (a[1] < b[1] && a[2] < b[2]){
+            return -1;
+        }
+        if (a[1] > b[1]){
+            return 1;
+        }
+        if (a[1] < b[1]){
+            return -1;
+        }
+        if (a[2] > b[2] && a[1] == b[1]){
+            return 1;
+        }
+        return 0;
+    });
+    futureDates.sort((a, b) => {
+        if (a[1] > b[1] && a[2] > b[2]){
+            return 1;
+        }
+        if (a[1] < b[1] && a[2] < b[2]){
+            return -1;
+        }
+        if (a[1] > b[1]){
+            return 1;
+        }
+        if (a[1] < b[1]){
+            return -1;
+        }
+        if (a[2] > b[2] && a[1] == b[1]){
+            return 1;
+        }
+        return 0;
+    });
     dateArr.push.apply(dateArr, futureDates);
     dateArr.push.apply(dateArr, pastDates);
     return dateArr;
 }
+
+
 
 function checkIfRequestIsDone() {
     if (timeoutCount > 100){
