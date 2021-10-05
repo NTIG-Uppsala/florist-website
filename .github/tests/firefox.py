@@ -75,12 +75,6 @@ class chrome_test_mainpage(BaseCase):
         self.go_back()    #Go back to main site
 
 
-        #Store Buttons
-        self.click('a[href="kiruna/"]')
-        self.go_back()
-        self.click('a[href="lulea/"]')
-        self.go_back()
-
 class chrome_test_kiruna(BaseCase):
     def test(self):
         self.open(kirunaPage)
