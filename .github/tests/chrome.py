@@ -158,6 +158,29 @@ class chrome_test_kiruna(BaseCase):
             self.assert_text(dates[i][1])
             print("index: " + str(i))'''
 
+
+class testStangdaDagListaKiruna(BaseCase):
+    def test(self):
+        self.open(kirunaPage)
+
+        self.execute_script("updateClosedDayList(new Date(Date.UTC(2012, 11, 25, 3, 0, 0, 200)))")
+        self.assert_text("Juldagen", "#dayLi1")
+
+        self.execute_script("updateClosedDayList(new Date(Date.UTC(2012, 6, 7, 3, 0, 0, 200)))")
+        self.assert_text("Julafton", "#dayLi1")
+
+        self.execute_script("updateClosedDayList(new Date(Date.UTC(2012, 0, 1, 3, 0, 0, 200)))")
+        self.assert_text("Nyårsdagen", "#dayLi1")
+
+        self.execute_script("updateClosedDayList(new Date(Date.UTC(2012, 11, 31, 3, 0, 0, 200)))")
+        self.assert_text("Nyårsafton", "#dayLi1")
+
+        self.execute_script("updateClosedDayList(new Date(Date.UTC(2012, 3, 29, 3, 0, 0, 200)))")
+        self.assert_text("Första maj", "#dayLi1")
+
+        self.execute_script("updateClosedDayList(new Date(Date.UTC(2012, 0, 5, 3, 0, 0, 200)))")
+        self.assert_text("Trettondedag", "#dayLi1")
+
 class chrome_test_lulea(BaseCase):
     def test(self):
         self.open(luleaPage)
@@ -250,3 +273,25 @@ class chrome_test_lulea(BaseCase):
             self.execute_script(codeToExecute)
             self.assert_text(dates[i][1])
             print("index: " + str(i))'''
+
+class testStangdaDagListaLulea(BaseCase):
+    def test(self):
+        self.open(luleaPage)
+
+        self.execute_script("updateClosedDayList(new Date(Date.UTC(2012, 11, 25, 3, 0, 0, 200)))")
+        self.assert_text("Juldagen", "#dayLi1")
+
+        self.execute_script("updateClosedDayList(new Date(Date.UTC(2012, 6, 7, 3, 0, 0, 200)))")
+        self.assert_text("Julafton", "#dayLi1")
+
+        self.execute_script("updateClosedDayList(new Date(Date.UTC(2012, 0, 1, 3, 0, 0, 200)))")
+        self.assert_text("Nyårsdagen", "#dayLi1")
+
+        self.execute_script("updateClosedDayList(new Date(Date.UTC(2012, 11, 31, 3, 0, 0, 200)))")
+        self.assert_text("Nyårsafton", "#dayLi1")
+
+        self.execute_script("updateClosedDayList(new Date(Date.UTC(2012, 3, 29, 3, 0, 0, 200)))")
+        self.assert_text("Första maj", "#dayLi1")
+
+        self.execute_script("updateClosedDayList(new Date(Date.UTC(2012, 0, 5, 3, 0, 0, 200)))")
+        self.assert_text("Trettondedag", "#dayLi1")
